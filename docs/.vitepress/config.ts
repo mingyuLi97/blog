@@ -54,7 +54,10 @@ function sidebarKnowledge(): DefaultTheme.SidebarGroup[] {
     },
     {
       text: "计算机网络",
-      items: [{ text: "ContentType", link: "/knowledge/network/content-type" }],
+      items: [
+        { text: "ContentType", link: "/knowledge/network/content-type" },
+        { text: "http 状态码", link: "/knowledge/network/http-code" },
+      ],
     },
   ];
 }
