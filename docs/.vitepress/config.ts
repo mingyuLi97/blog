@@ -52,5 +52,9 @@ function sidebarKnowledge(): DefaultTheme.SidebarGroup[] {
         { text: "事件冒泡", link: "/knowledge/js/event" },
       ],
     },
+    {
+      text: "计算机网络",
+      items: [{ text: "ContentType", link: "/knowledge/network/content-type" }],
+    },
   ];
 }
