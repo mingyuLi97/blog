@@ -1,7 +1,7 @@
 import { defineConfig, DefaultTheme } from "vitepress";
 
 export default defineConfig({
-  base: '/blog/',
+  base: "/blog/",
   title: "莱米",
   description: "莱米的个人博客",
   themeConfig: {
@@ -47,6 +47,7 @@ function sidebarKnowledge(): DefaultTheme.SidebarGroup[] {
     },
     {
       text: "JavaScript",
+      collapsible: true,
       items: [
         { text: "数据类型检测", link: "/knowledge/js/typeof" },
         { text: "this", link: "/knowledge/js/this" },
@@ -55,9 +56,18 @@ function sidebarKnowledge(): DefaultTheme.SidebarGroup[] {
     },
     {
       text: "计算机网络",
+      collapsible: true,
       items: [
         { text: "ContentType", link: "/knowledge/network/content-type" },
         { text: "http 状态码", link: "/knowledge/network/http-code" },
+        { text: "DNS", link: "/knowledge/network/dns" },
+        { text: "网络安全", link: "/knowledge/network/security" },
+      ],
+    },
+    {
+      text: "浏览器",
+      items: [
+        {text: '跨域', link: '/knowledge/browser/cross-domain'}
       ],
     },
   ];
