@@ -63,6 +63,7 @@ function sidebarKnowledge(): DefaultTheme.SidebarGroup[] {
         { text: "DNS", link: "/knowledge/network/dns" },
         { text: "网络安全", link: "/knowledge/network/security" },
         { text: "WebSocket", link: "/knowledge/network/websocket" },
+        { text: "传输协议TCP和UDP", link: "/knowledge/network/tcp-udp" },
       ],
     },
     {
