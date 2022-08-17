@@ -12,7 +12,14 @@
 2. 服务端接收到请求，同样采用 http 返回数据。
 3. 客户端收到连接成功的消息，借助 TCP 通道进行全双工通信。
 
-## websocket 与 http 的关系
+说明：`Upgrade: websocket;Connection: Upgrade;` 告诉服务器我是一个 WebSocket 协议，而不是 http
+
+## 心跳包用途
+
+1. 定时发送消息，防止服务端超时自动断线。
+2. 检测连接是否正常，如果发送一个消息后服务端没有响应，应重新建立连接。
+
+## WebSocket 与 http 的关系
 
 **相同点：**
 
