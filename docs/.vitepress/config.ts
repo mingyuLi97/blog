@@ -62,13 +62,12 @@ function sidebarKnowledge(): DefaultTheme.SidebarGroup[] {
         { text: "http 状态码", link: "/knowledge/network/http-code" },
         { text: "DNS", link: "/knowledge/network/dns" },
         { text: "网络安全", link: "/knowledge/network/security" },
+        { text: "WebSocket", link: "/knowledge/network/websocket" },
       ],
     },
     {
       text: "浏览器",
-      items: [
-        {text: '跨域', link: '/knowledge/browser/cross-domain'}
-      ],
+      items: [{ text: "跨域", link: "/knowledge/browser/cross-domain" }],
     },
   ];
 }
