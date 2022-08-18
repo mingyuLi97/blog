@@ -6,13 +6,13 @@
 
 提交的表单数据会转换为键值对并按照 `key1=val1&key2=val2` 的方式进行编码，`key` 和 `val` 都进行 URL 转码, 不支持文件，一般用于普通表单。
 
-![alt](https://raw.githubusercontent.com/mingyuLi97/picture/master/img/www-form-urlencoded.png)
+![alt](https://limy-1309594960.cos.ap-beijing.myqcloud.com/blog/www-form-urlencoded.png)
 
 ## multipart/form-data
 
 这种方式数据有多个部分，每部分用 boundary（分隔符）分开，既可以上传键值对也可以上传 **文件**（可多个）。
 
-![alt](https://raw.githubusercontent.com/mingyuLi97/picture/master/img/multipart_form-data.png)
+![alt](https://limy-1309594960.cos.ap-beijing.myqcloud.com/blog/multipart_form-data.png)
 
 ## application/json
 
