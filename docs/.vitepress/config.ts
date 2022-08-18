@@ -37,12 +37,10 @@ function sidebarKnowledge(): DefaultTheme.SidebarGroup[] {
       ],
     },
     {
-      // text: 'CSS',
+      text: "CSS",
       items: [
-        {
-          text: "CSS",
-          link: "/knowledge/css/",
-        },
+        { text: "盒模型", link: "/knowledge/css/box" },
+        { text: "flex", link: "/knowledge/css/flex" },
       ],
     },
     {
