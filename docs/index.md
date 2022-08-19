@@ -10,13 +10,13 @@ hero:
   tagline: 没啥特点仅供学习
   image:
     src: /logo.jpg
-  # actions:
-  #   - theme: brand
-  #     text: 开始
-  #     link: /guide/
-  #   - theme: alt
-  #     text: 在 Gitee 上查看
-  #     link: https://gitee.com/geeksdidi/kittyui
+  actions:
+    - theme: brand
+      text: 开始
+      link: /knowledge/html/h5
+    # - theme: alt
+    #   text: 在 Gitee 上查看
+    #   link: https://gitee.com/geeksdidi/kittyui
 
 features:
   - icon: 💡

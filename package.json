@@ -5,6 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "predev": "node ./scripts/index.js",
     "dev": "vitepress dev docs --host",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
@@ -12,8 +13,23 @@
     "pub": "git add . && git commit -m \"deploy: 🚀\"",
     "postpub": "git push"
   },
-  "devDependencies": {
+  "dependencies": {
     "vitepress": "^1.0.0-alpha.4",
     "vue": "^3.2.37"
-  }
+  },
+  "devDependencies": {
+    "@limy-org/prettier-config": "^1.0.0",
+    "@types/node": "^18.7.6",
+    "@types/prettier": "^2.7.0",
+    "glob": "^8.0.3",
+    "husky": "7.0.4",
+    "lint-staged": "11.2.3",
+    "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "*.{js,ts,json,vue,md}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": "@limy-org/prettier-config"
 }
