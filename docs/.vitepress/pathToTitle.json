@@ -1,8 +1,13 @@
 {
   "/index": "",
+  "/interview/for_output/event-loop": "事件循环",
+  "/interview/handwriting/apply-call-bind": "apply、call、bind",
+  "/interview/js/event-loop": "事件循环",
+  "/interview/other/index": "常见问题",
   "/knowledge/browser/cross-domain": "跨域",
   "/knowledge/css/box": "盒模型",
   "/knowledge/css/flex": "flex",
+  "/knowledge/html/basic": "基础",
   "/knowledge/html/h5": "HTML",
   "/knowledge/js/event": "事件冒泡",
   "/knowledge/js/this": "JS 中 this 的五种情况",
@@ -12,5 +17,6 @@
   "/knowledge/network/http-code": "http 状态码",
   "/knowledge/network/security": "网络安全",
   "/knowledge/network/tcp-udp": "传输协议 TCP 和 UDP",
-  "/knowledge/network/websocket": "WebSocket"
+  "/knowledge/network/websocket": "WebSocket",
+  "/knowledge/vue/directive": "自定义指令"
 }

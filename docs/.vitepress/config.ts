@@ -5,7 +5,11 @@ import pathToTitle from './pathToTitle.json';
 
 const DOCS_DIR = path.resolve(process.cwd(), 'docs');
 
-type DocCategory = 'knowledge' | 'leetCode';
+type DocCategory = 'knowledge' | 'interview' | 'leetCode';
+
+type SidebarGroupConfig = Omit<DefaultTheme.SidebarGroup, 'items'> & {
+  subcategory: string;
+};
 
 export default defineConfig({
   markdown: {
@@ -18,7 +22,8 @@ export default defineConfig({
     siteTitle: 'limy-blog',
     logo: '/logo.jpg',
     nav: [
-      { text: '知识树', link: '/knowledge/html/h5' },
+      { text: '知识树', link: '/knowledge/html/basic' },
+      { text: '面试题', link: '/interview/js/event-loop' },
       { text: '我的掘金', link: 'https://juejin.cn/user/2383396941081934' }
     ],
     socialLinks: [
@@ -28,26 +33,40 @@ export default defineConfig({
       }
     ],
     sidebar: {
-      '/knowledge/': sidebarKnowledge()
+      '/knowledge/': sidebarKnowledge(),
+      '/interview/': sidebarInterview()
     }
   }
 });
 
 function sidebarKnowledge(): DefaultTheme.SidebarGroup[] {
-  const config = [
-    { text: 'HTML', target: 'html', collapsible: true, collapsed: false },
-    { text: 'CSS', target: 'css' },
-    { text: 'JavaScript', target: 'js' },
-    { text: '计算机网络', target: 'network' },
-    { text: '浏览器', target: 'browser' }
-  ];
+  return genSideBarGroup('knowledge', [
+    { text: 'HTML', subcategory: 'html', collapsible: true, collapsed: false },
+    { text: 'CSS', subcategory: 'css' },
+    { text: 'JavaScript', subcategory: 'js' },
+    { text: 'Vue', subcategory: 'vue' },
+    { text: '计算机网络', subcategory: 'network' },
+    { text: '浏览器', subcategory: 'browser' }
+  ]);
+}
+
+function sidebarInterview(): DefaultTheme.SidebarGroup[] {
+  return genSideBarGroup('interview', [
+    { text: '基础', subcategory: 'other' },
+    { text: 'JavaScript', subcategory: 'js' },
+    { text: '手写题', subcategory: 'handwriting' },
+    { text: '看输出', subcategory: 'for_output' }
+  ]);
+}
+
+function genSideBarGroup(category: DocCategory, config: SidebarGroupConfig[]) {
   return config.map(
-    ({ text, target, collapsible = true, collapsed = false }) => {
+    ({ text, subcategory, collapsible = true, collapsed = false }) => {
       return {
         collapsible,
         collapsed,
         text,
-        items: genSideBarItems('knowledge', target)
+        items: genSideBarItems(category, subcategory)
       };
     }
   );
