@@ -15,7 +15,7 @@
     "postpub": "git push"
   },
   "dependencies": {
-    "vitepress": "^1.0.0-alpha.4",
+    "vitepress": "^1.0.0-alpha.9",
     "vue": "^3.2.37"
   },
   "devDependencies": {

@@ -17,6 +17,7 @@
   "/knowledge/network/content-type": "Content-Type",
   "/knowledge/network/dns": "DNS",
   "/knowledge/network/http-code": "http 状态码",
+  "/knowledge/network/http": "HTTP",
   "/knowledge/network/security": "网络安全",
   "/knowledge/network/tcp-udp": "传输协议 TCP 和 UDP",
   "/knowledge/network/websocket": "WebSocket",
