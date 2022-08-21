@@ -2,6 +2,8 @@
   "/index": "",
   "/interview/for_output/event-loop": "事件循环",
   "/interview/handwriting/apply-call-bind": "apply、call、bind",
+  "/interview/handwriting/currying": "函数柯里化",
+  "/interview/handwriting/debounce-throttle": "防抖、节流",
   "/interview/js/event-loop": "事件循环",
   "/interview/other/index": "常见问题",
   "/knowledge/browser/cross-domain": "跨域",

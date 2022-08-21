@@ -4,6 +4,7 @@ import glob from 'glob';
 import pathToTitle from './pathToTitle.json';
 
 const DOCS_DIR = path.resolve(process.cwd(), 'docs');
+const COMPONENTS_DIR = path.resolve(process.cwd(), 'components');
 
 type DocCategory = 'knowledge' | 'interview' | 'leetCode';
 
@@ -12,6 +13,13 @@ type SidebarGroupConfig = Omit<DefaultTheme.SidebarGroup, 'items'> & {
 };
 
 export default defineConfig({
+  vite: {
+    resolve: {
+      alias: {
+        '@components': COMPONENTS_DIR
+      }
+    }
+  },
   markdown: {
     theme: 'one-dark-pro'
   },

@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "predev": "node ./scripts/index.js",
+    "prebuild": "node ./scripts/index.js",
     "dev": "vitepress dev docs --host",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
