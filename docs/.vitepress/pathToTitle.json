@@ -6,6 +6,7 @@
   "/interview/handwriting/debounce-throttle": "防抖、节流",
   "/interview/js/event-loop": "事件循环",
   "/interview/other/index": "常见问题",
+  "/knowledge/browser/cache": "浏览器缓存",
   "/knowledge/browser/cross-domain": "跨域",
   "/knowledge/css/box": "盒模型",
   "/knowledge/css/flex": "flex",
