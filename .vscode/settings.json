@@ -9,6 +9,7 @@
     "QUIC",
     "referer",
     "typeof",
-    "vitepress"
+    "vitepress",
+    "yalc"
   ]
 }

@@ -6,7 +6,7 @@ import pathToTitle from './pathToTitle.json';
 const DOCS_DIR = path.resolve(process.cwd(), 'docs');
 const COMPONENTS_DIR = path.resolve(process.cwd(), 'components');
 
-type DocCategory = 'knowledge' | 'interview' | 'leetCode';
+type DocCategory = 'knowledge' | 'interview' | 'leetCode' | 'engineer';
 
 type SidebarGroupConfig = Omit<DefaultTheme.SidebarGroup, 'items'> & {
   subcategory: string;
@@ -30,7 +30,8 @@ export default defineConfig({
     siteTitle: 'limy-blog',
     logo: '/logo.jpg',
     nav: [
-      { text: '知识树', link: '/knowledge/html/basic' },
+      { text: '基础知识', link: '/knowledge/html/basic' },
+      { text: '工程化', link: '/engineer/packages/yalc' },
       { text: '面试题', link: '/interview/js/event-loop' },
       { text: '我的掘金', link: 'https://juejin.cn/user/2383396941081934' }
     ],
@@ -42,7 +43,8 @@ export default defineConfig({
     ],
     sidebar: {
       '/knowledge/': sidebarKnowledge(),
-      '/interview/': sidebarInterview()
+      '/interview/': sidebarInterview(),
+      '/engineer/': sidebarEngineer()
     }
   }
 });
@@ -64,6 +66,12 @@ function sidebarInterview(): DefaultTheme.SidebarGroup[] {
     { text: 'JavaScript', subcategory: 'js' },
     { text: '手写题', subcategory: 'handwriting' },
     { text: '看输出', subcategory: 'for_output' }
+  ]);
+}
+
+function sidebarEngineer(): DefaultTheme.SidebarGroup[] {
+  return genSideBarGroup('engineer', [
+    { text: '工具', subcategory: 'packages' }
   ]);
 }
 
