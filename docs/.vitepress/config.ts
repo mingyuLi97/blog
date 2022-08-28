@@ -14,6 +14,9 @@ type SidebarGroupConfig = Omit<DefaultTheme.SidebarGroup, 'items'> & {
 
 export default defineConfig({
   vite: {
+    server: {
+      open: true
+    },
     resolve: {
       alias: {
         '@components': COMPONENTS_DIR
