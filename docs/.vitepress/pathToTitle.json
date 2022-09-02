@@ -1,4 +1,5 @@
 {
+  "/engineer/git/index": "git",
   "/engineer/packages/yalc": "yalc",
   "/index": "",
   "/interview/for_output/event-loop": "事件循环",
@@ -20,7 +21,9 @@
   "/knowledge/html/basic": "基础",
   "/knowledge/html/h5": "HTML",
   "/knowledge/html/seo": "搜索引擎优化（SEO）",
+  "/knowledge/js/arrow_function": "箭头函数",
   "/knowledge/js/event": "事件冒泡",
+  "/knowledge/js/gc": "垃圾回收机制",
   "/knowledge/js/new": "new 操作符",
   "/knowledge/js/proto": "原型和原型链",
   "/knowledge/js/this": "JS 中 this 的五种情况",
