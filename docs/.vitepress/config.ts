@@ -2,6 +2,8 @@ import { defineConfig, DefaultTheme } from 'vitepress';
 import path from 'path';
 import glob from 'glob';
 import pathToTitle from './pathToTitle.json';
+import MdItCustomAttrs from 'markdown-it-custom-attrs';
+import { createPreviewDatasetObj } from './theme/img-overlay';
 
 const DOCS_DIR = path.resolve(process.cwd(), 'docs');
 const COMPONENTS_DIR = path.resolve(process.cwd(), 'components');
@@ -24,7 +26,10 @@ export default defineConfig({
     }
   },
   markdown: {
-    theme: 'one-dark-pro'
+    theme: 'one-dark-pro',
+    config(md) {
+      md.use(MdItCustomAttrs, 'image', createPreviewDatasetObj());
+    }
   },
   base: '/blog/',
   title: '莱米',
