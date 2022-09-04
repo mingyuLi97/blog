@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', function () {
-  var overlay;
+function initImgPreview() {
   var imgEl;
+  var overlay;
   function open(url) {
     imgEl.src = url;
     overlay.classList.remove('hidden');
@@ -50,4 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
       open(el.src);
     }
   });
-});
+}
+
+export const codeJs = `${initImgPreview.toString()}
+if (document.readyState === 'complete' || document.readyState === 'loaded') {
+  initImgPreview();
+} else {
+  document.addEventListener('DOMContentLoaded', initImgPreview);
+}
+`;

@@ -1,5 +1,6 @@
 import { DefaultTheme, UserConfig } from 'vitepress';
 import MdItCustomAttrs from 'markdown-it-custom-attrs';
+import { codeJs } from './code';
 
 export const PREVIEW_KEY = '__preview__';
 
@@ -85,7 +86,7 @@ export function withImgPreview(config: UserConfig<DefaultTheme.Config>) {
     config.head = [];
   }
   config.head.push(
-    ['script', {}, jsCode],
+    ['script', {}, codeJs],
     ['style', { type: 'text/css' }, cssCode]
   );
   return config;
