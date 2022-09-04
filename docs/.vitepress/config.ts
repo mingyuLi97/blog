@@ -2,8 +2,7 @@ import { defineConfig, DefaultTheme } from 'vitepress';
 import path from 'path';
 import glob from 'glob';
 import pathToTitle from './pathToTitle.json';
-import MdItCustomAttrs from 'markdown-it-custom-attrs';
-import { createPreviewDatasetObj } from './theme/img-overlay';
+import { withImgPreview } from './img-overlay';
 
 const DOCS_DIR = path.resolve(process.cwd(), 'docs');
 const COMPONENTS_DIR = path.resolve(process.cwd(), 'components');
@@ -14,7 +13,7 @@ type SidebarGroupConfig = Omit<DefaultTheme.SidebarGroup, 'items'> & {
   subcategory: string;
 };
 
-export default defineConfig({
+const config = defineConfig({
   vite: {
     server: {
       open: true
@@ -26,10 +25,7 @@ export default defineConfig({
     }
   },
   markdown: {
-    theme: 'one-dark-pro',
-    config(md) {
-      md.use(MdItCustomAttrs, 'image', createPreviewDatasetObj());
-    }
+    theme: 'one-dark-pro'
   },
   base: '/blog/',
   title: '莱米',
@@ -110,3 +106,5 @@ function genSideBarItems(
     };
   });
 }
+
+export default withImgPreview(config);
