@@ -41,6 +41,7 @@
   "/knowledge/network/websocket": "WebSocket",
   "/knowledge/vue/basic": "概念",
   "/knowledge/vue/communication": "组件通信",
+  "/knowledge/vue/diff": "diff 算法",
   "/knowledge/vue/directive": "指令",
   "/knowledge/vue/watcher": "watcher"
 }
