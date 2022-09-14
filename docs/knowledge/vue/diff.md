@@ -174,3 +174,135 @@ function updateChildren(el, oldChildren, newChildren) {
   }
 }
 ```
+
+## Vue3
+
+| 旧孩子 | 新孩子 | 处理                     |
+| :----: | :----: | ------------------------ |
+|  数组  |  文本  | 删除老儿子，设置文本内容 |
+|  文本  |  文本  | 更新文本                 |
+|  数组  |  数组  | diff 算法                |
+|  文本  |  数组  | 清空文本，创建新儿子挂载 |
+|  数组  |   空   | 清空儿子                 |
+
+#### diff 全量更新 patchKeyedChildren()
+
+```javascript
+/**
+ * diff 更新vnode -> dom
+ * @param c1  oldChildren
+ * @param c2  newChildren
+ * @param el
+ */
+const patchKeyedChildren = (c1, c2, el) => {
+  let i = 0; // 两个子节点的头指针
+  let e1 = c1.length - 1;
+  let e2 = c2.length - 1;
+  // 从前往后比 相同的节点直接复用，不同的时候退出循环了
+  // 任意一方头尾指针相同，结束循环
+  while (i <= e1 && i <= e2) {
+    const n1 = c1[i];
+    const n2 = c2[i];
+    if (isSameVnode(n1, n2)) {
+      patch(n1, n2, el); // 同一个dom节点 复用 递归比较属性和子节点了
+    } else {
+      // 不同 则退出循环 后面的节点默认都是不同的 前面的都是相同节点
+      break;
+    }
+    i++;
+  }
+  // 从后开始往前比
+  while (i <= e1 && i <= e2) {
+    const n1 = c1[e1];
+    const n2 = c2[e2];
+    if (isSameVnode(n1, n2)) {
+      patch(n1, n2, el);
+    } else break;
+    e1--;
+    e2--;
+  }
+  // 同序列 common sequence + mount
+  // i 比 e1 大 则 i 和 e2 之间的节点都是新增节点(可能没有)
+  // 上面的从前往后和从后往前两种情况都可以通过下面代码来处理
+  if (i > e1) {
+    // 循环创建新增节点
+    while (i <= e2) {
+      /**
+       * 从前往后、从后往前两种情况需要区分新增的节点是要插在最后(类似 push)呢还是插在最前面(unshift)
+       * 我们可以狠巧妙的发现，无论哪种情况 其实都是看后面的节点是否存在
+       * 因为 insertBefore 有个特性 如果传入的是真实节点就插入到其前面，如果是 null 就追加在后面(类似appendChild)
+       */
+      const nextPos = e2 + 1;
+      // 插入指定兄弟节点之前
+      const anchor = c2[nextPos]?.el;
+      patch(null, c2[i++], el, anchor);
+    }
+  }
+  // 同序列卸载
+  else if (i > e2) {
+    while (i <= e1) {
+      unmount(c1[i++]);
+    }
+  }
+  // TODO 乱序比对 能优化的都已经做了
+  let s1 = i,
+    s2 = i;
+  // 将新的vnode做成map比较
+  const keyToNewIndexMap = new Map();
+  for (let i = s2; i <= e2; i++) {
+    keyToNewIndexMap.set(c2[i].key, i);
+  }
+  // 应该移动的节点个数
+  let toBePatched = e2 - s2 + 1;
+  /**
+   * 标记被patch过的节点 也就是复用的节点 用于后面倒序插入时判断是新增的还是patch的
+   * 如果后面遍历一次之后，位置上的值还是0，说明这个节点是新增的
+   */
+  const newIndexToOldIndex = new Array(toBePatched).fill(0);
+  /**
+   * 循环老的节点 看新的有没有 有就比较差异 没有就卸载节点
+   * 注意 这里只是将节点给做了 patch 和卸载，并没有将其移动到正确的位置
+   */
+  for (let i = s1; i <= e1; i++) {
+    const oldChild = c1[i];
+    const existIndex = keyToNewIndexMap.get(oldChild.key);
+    if (!existIndex) {
+      // 卸载
+      unmount(oldChild);
+    } else {
+      // 比较节点差异 新的索引对应老索引
+      newIndexToOldIndex[existIndex - s2] = i + 1;
+      patch(oldChild, c2[existIndex], el);
+    }
+  }
+  // 移动节点位置 从后往前插入
+  // TODO  最长递增子序列 优化
+  // 获取最长递增子序列
+  const increment = getSequence(newIndexToOldIndex);
+  let j = increment.length - 1;
+  for (let i = toBePatched - 1; i >= 0; i--) {
+    // 计算出节点的真实索引
+    let index = s2 + i;
+    const current = c2[index]; // 找到最后一个节点
+    const anchor = c2[index + 1]?.el; // 参照物 插入该节点前
+    // 是新增 还是移动复用节点
+    if (newIndexToOldIndex[i] === 0) {
+      // 需要创建
+      patch(null, current, el, anchor);
+    } else {
+      // 不相等 就插入节点 相同 就跳过
+      if (i !== increment[j]) {
+        // 比对过 直接移动节点即可复用
+        hostInsert(current.el, el, anchor);
+      } else {
+        j--;
+      }
+    }
+  }
+};
+```
+
+1. keyToNewIndexMap `{e:2, c:3, d:4, h:5}`
+2. 根据新的节点的个数创建标记 newIndexToOldIndex, 新的索引对应老索引
+   如果后面遍历一次之后 位置上的值还是 0，说明这个节点是新增的
+3. 倒序插入（通过最长递增子序列进行优化）

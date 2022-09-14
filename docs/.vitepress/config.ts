@@ -3,6 +3,7 @@ import path from 'path';
 import glob from 'glob';
 import pathToTitle from './pathToTitle.json';
 import { withImgPreview } from './img-overlay';
+import anchor from 'markdown-it-anchor';
 
 const DOCS_DIR = path.resolve(process.cwd(), 'docs');
 const COMPONENTS_DIR = path.resolve(process.cwd(), 'components');
@@ -25,7 +26,11 @@ const config = defineConfig({
     }
   },
   markdown: {
-    theme: 'one-dark-pro'
+    theme: 'one-dark-pro',
+    anchor: {
+      // permalink: anchor.permalink.headerLink()
+    }
+    // toc: { level: [2] }
   },
   base: '/blog/',
   title: '莱米',
@@ -36,7 +41,7 @@ const config = defineConfig({
     nav: [
       { text: '基础知识', link: '/knowledge/html/basic' },
       { text: '工程化', link: '/engineer/packages/yalc' },
-      { text: '面试题', link: '/interview/js/event-loop' },
+      { text: '面试题', link: '/interview/index' },
       { text: '我的掘金', link: 'https://juejin.cn/user/2383396941081934' }
     ],
     socialLinks: [

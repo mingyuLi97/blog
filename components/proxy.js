@@ -72,6 +72,7 @@ console.log(proxy.name);
 function foo() {
   const parent = {
     name: 'parent1',
+    // 如果不用Reflect用 target 访问时 this 指向会错误  取 value 时是正常的  但是 name 改变时会有问题
     get value() {
       return this.name;
     }

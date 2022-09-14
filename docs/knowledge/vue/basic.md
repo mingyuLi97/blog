@@ -55,20 +55,33 @@ Vue 中的组件是可以复用的，数据以函数返回这样每次复用都�
 
 ## Vue2 Vue3 对比
 
-#### 1. 生命周期
+#### 设计思想
+
+1. Vue3 将所有模块独立出来，比如可以单独使用响应式模块，并不需要引入整个 Vue
+2. vue2 中存在 `Vue.$nextTick Vue.component` 等挂载到原形的方法，不利于 tree-shaking，Vue3 将这些 api 重写
+3. 扩展更方便：Vue3 允许自定义渲染器，扩展能力强。不会发生以前的事情，改写 Vue 源码改造渲染方式。
+
+#### 生命周期
 
 vue3 提出了 setup
 
-#### 2. 响应式原理
+#### 响应式原理
 
 proxy 替代了 Object.defineProperty
 [proxy 和 Object.defineProperty 的区别](../js/proxy.md#proxy-和-objectdefineproperty-的区别)
 
-#### 3. diff 算法
+#### diff 算法
 
-#### 4. API 风格
+#### API 风格
 
-组合式（Composition API）vs 选项式 （Options API）
+- vue2 中使用的是 **选项式 （Options API）**，其特点是代码写在一起，通过 this 访问，所以出现了一些问题
+
+  1. 随着业务逻辑变得复杂，代码会很大（一个文件特别多逻辑）
+  2. 需要考虑 this 指向的问题
+  3. 因为都是挂载到组件实例上，一些未使用的方法和属性依旧会被打包
+  4. 组件逻辑共享只能通过 mixin 实现，但是会有数据来源不明确的问题
+
+- vue3 使用的是 **组合式（Composition API）**, 能够将业务代码按照功能拆分成独立的块更好的维护和复用，同时对 tree-shaking 也更加友好
 
 ## 参考
 

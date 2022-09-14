@@ -10,6 +10,7 @@
 git reset --soft HEAD^
 #
 --hard
+# 修改提交的 message
 --amend
 ```
 
