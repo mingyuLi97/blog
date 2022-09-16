@@ -171,7 +171,7 @@ export default {
 - $parent：访问父实例
 - $children：子实例
 
-## vuex
+## [vuex](./vuex.md)
 
 ## 参考
 

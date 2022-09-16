@@ -328,7 +328,7 @@ vue 的 patch 方法中，会通过标签名和 key 来判断是否是相同节�
 1. 会影响性能，在插入节点操作时，如果用 index 作为 key，那么插入的节点的后面所有节点都会认为不是同一个（因为 index 有变化），都会重新创建 DOM，极大的浪费了性能。
 2. 删除操作时，可能会导致数组错位(常见于 input 输入框)
 
-## vue3 相比 vue2 的的优点
+## vue3 相比 vue2 的优点
 
 1. 增加了 [PatchFlags](https://github.com/vuejs/core/blob/main/packages/shared/src/patchFlags.ts#L19) 在编译的时候（创建 render 函数）将静态节点提升，将动态节点标记出哪些属性是动态的，使 vue 在运行时做 diff 更加高效。
 

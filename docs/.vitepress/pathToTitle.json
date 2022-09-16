@@ -45,5 +45,6 @@
   "/knowledge/vue/communication": "组件通信",
   "/knowledge/vue/diff": "diff 算法",
   "/knowledge/vue/directive": "指令",
+  "/knowledge/vue/vuex": "vuex",
   "/knowledge/vue/watcher": "watcher"
 }

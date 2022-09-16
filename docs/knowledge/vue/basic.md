@@ -70,7 +70,9 @@ vue3 提出了 setup
 proxy 替代了 Object.defineProperty
 [proxy 和 Object.defineProperty 的区别](../js/proxy.md#proxy-和-objectdefineproperty-的区别)
 
-#### diff 算法
+#### diff 算法 [vue3 相比 vue2 的优点](./diff.md#vue3-相比-vue2-的优点)
+
+<br/>
 
 #### API 风格
 
