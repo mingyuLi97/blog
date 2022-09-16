@@ -1,0 +1,7 @@
+.brand-c-button {
+  margin-right: 20px;
+  background: var(--vp-c-brand);
+  border-radius: 5px;
+  line-height: 30px;
+  padding: 10px;
+}

@@ -28,6 +28,7 @@
   "/knowledge/js/gc": "垃圾回收机制",
   "/knowledge/js/map_set": "Set 和 Map 数据结构",
   "/knowledge/js/new": "new 操作符",
+  "/knowledge/js/promise": "Promise",
   "/knowledge/js/proto": "原型和原型链",
   "/knowledge/js/proxy": "Proxy、Reflect",
   "/knowledge/js/this": "JS 中 this 的五种情况",
