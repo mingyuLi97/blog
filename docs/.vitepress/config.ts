@@ -55,6 +55,11 @@ const config = defineConfig({
       '/interview/': sidebarInterview(),
       '/engineer/': sidebarEngineer()
     }
+    // algolia: {
+    //   appId: 'H6NWHVLNUL',
+    //   apiKey: 'a7233c5dfa7ed655817ff82d5e8dfa5c',
+    //   indexName: 'vitepress-blog'
+    // },
   }
 });
 

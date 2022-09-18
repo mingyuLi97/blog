@@ -14,6 +14,7 @@
     "postpub": "git push"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "markdown-it-anchor": "^8.6.5",
     "markdown-it-custom-attrs": "^1.0.2",
     "vitepress": "^1.0.0-alpha.15",
