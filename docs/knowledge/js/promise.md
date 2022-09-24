@@ -4,6 +4,21 @@
 import { runPromiseAll, runPromiseRace, runPromiseAny,runPromiseAllSettled } from './promise.js';
 </script>
 
+## 原理
+
+1. Promise 是一个类，在执行这个类的时候会传入一个执行器，这个执行器会立即执行
+2. Promise 会有三种状态
+
+   - Pending 等待
+   - Fulfilled 完成
+   - Rejected 失败
+
+3. 状态只能由 Pending --> Fulfilled 或者 Pending --> Rejected，且一但发生改变便不可二次修改；
+4. Promise 中使用 resolve 和 reject 两个函数来更改状态；
+5. then 方法内部做但事情就是状态判断
+   - 如果状态是成功，调用成功回调函数
+   - 如果状态是失败，调用失败回调函数
+
 ## Promise.resolve
 
 1. `Promise.resolve(42)` 相当于 `new Promise(function(resolve){ resolve(42); });`

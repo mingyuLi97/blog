@@ -211,3 +211,102 @@ export function runPromiseAllSettled() {
   //   { status: 'rejected', reason: 'p5 rejected 延时1.5秒' }
   // ]
 }
+
+//#region main
+
+const PENDING = 'pending';
+const FULFILLED = 'fulfilled';
+const REJECTED = 'rejected';
+
+class _Promise {
+  /**
+   * @param {ConstructorParameters<PromiseConstructor>[0]} executor
+   */
+  constructor(executor) {
+    this.value = null;
+    this.reason = null;
+    this.status = PENDING;
+
+    this.onFulfilledCallbacks = [];
+    this.onRejectedCallbacks = [];
+
+    // 使用箭头函数防止 this 指向有问题
+    this.resolve = val => {
+      if (this.status === PENDING) {
+        this.value = val;
+        this.status = FULFILLED;
+        while (this.onFulfilledCallbacks.length) {
+          this.onFulfilledCallbacks.shift()(val);
+        }
+      }
+    };
+    this.reject = reason => {
+      if (this.status === PENDING) {
+        this.reason = reason;
+        this.status = REJECTED;
+        while (this.onRejectedCallbacks.length) {
+          this.onRejectedCallbacks.shift()(val);
+        }
+      }
+    };
+    executor(this.resolve, this.reject);
+  }
+
+  /**
+   * @param {(v)=>void} onFulfilled
+   * @param {(r) => void} onRejected
+   */
+  then(onFulfilled, onRejected) {
+    debugger;
+    // 为了实现链式调用，直接返回一个新的 promise
+    const promise2 = new _Promise((resolve, reject) => {
+      if (this.status === FULFILLED) {
+        const res = onFulfilled(this.value);
+        resolvePromise(res, resolve, reject);
+      } else if (this.status === REJECTED) {
+        onRejected(this.reason);
+      } else if (this.status === PENDING) {
+        this.onFulfilledCallbacks.push(onFulfilled);
+        this.onRejectedCallbacks.push(onRejected);
+      }
+    });
+
+    return promise2;
+  }
+}
+/**
+ * 如果是普通值直接 resolve 返回， 如果是 promise 对象，那么将 resolve 和 reject 方法透传到下一层
+ * @param {*} v 传的值 可能是 promise 对象 也有可能是普通值
+ * @param {*} resolve
+ * @param {*} reject
+ * @return {*}
+ */
+function resolvePromise(v, resolve, reject) {
+  if (v instanceof _Promise) {
+    v.then(resolve, reject);
+  } else {
+    resolve(v);
+  }
+}
+
+function runCustomPromise() {
+  const p = new _Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(true);
+    }, 1000);
+    // reject(new Error('reject error!!!'));
+  });
+
+  p.then(value => {
+    console.log(1);
+    console.log('resolve', value);
+    return 222;
+  }).then(value => {
+    console.log(2);
+    console.log('resolve', value);
+  });
+}
+
+runCustomPromise();
+
+//#endregion main
