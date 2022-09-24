@@ -1,37 +1,13 @@
 import { defineConfig, DefaultTheme } from 'vitepress';
-import path from 'path';
-import glob from 'glob';
-import pathToTitle from './pathToTitle.json';
 import { withImgPreview } from './img-overlay';
 import anchor from 'markdown-it-anchor';
-
-const DOCS_DIR = path.resolve(process.cwd(), 'docs');
-const COMPONENTS_DIR = path.resolve(process.cwd(), 'components');
-
-type DocCategory = 'knowledge' | 'interview' | 'leetCode' | 'engineer';
-
-type SidebarGroupConfig = Omit<DefaultTheme.SidebarGroup, 'items'> & {
-  subcategory: string;
-};
+import { getViteConfig } from './vite-config';
+import { getMarkDownConfig } from './markdown-config';
+import { getSidebarConfig } from './sidebar-config';
 
 const config = defineConfig({
-  vite: {
-    server: {
-      open: true
-    },
-    resolve: {
-      alias: {
-        '@components': COMPONENTS_DIR
-      }
-    }
-  },
-  markdown: {
-    theme: 'one-dark-pro',
-    anchor: {
-      // permalink: anchor.permalink.headerLink()
-    }
-    // toc: { level: [2] }
-  },
+  vite: getViteConfig(),
+  markdown: getMarkDownConfig(),
   base: '/blog/',
   title: '莱米',
   description: '莱米的个人博客',
@@ -40,6 +16,7 @@ const config = defineConfig({
     logo: '/logo.jpg',
     nav: [
       { text: '基础知识', link: '/knowledge/html/basic' },
+      { text: '编程思想', link: '/design/design_ pattern/observer' },
       { text: '工程化', link: '/engineer/packages/yalc' },
       { text: '面试题', link: '/interview/index' },
       { text: '我的掘金', link: 'https://juejin.cn/user/2383396941081934' }
@@ -50,11 +27,7 @@ const config = defineConfig({
         link: 'https://github.com/mingyuLi97'
       }
     ],
-    sidebar: {
-      '/knowledge/': sidebarKnowledge(),
-      '/interview/': sidebarInterview(),
-      '/engineer/': sidebarEngineer()
-    },
+    sidebar: getSidebarConfig(),
     algolia: {
       appId: 'H6NWHVLNUL',
       apiKey: 'a7233c5dfa7ed655817ff82d5e8dfa5c',
@@ -62,59 +35,5 @@ const config = defineConfig({
     }
   }
 });
-
-function sidebarKnowledge(): DefaultTheme.SidebarGroup[] {
-  return genSideBarGroup('knowledge', [
-    { text: 'HTML', subcategory: 'html', collapsible: true, collapsed: false },
-    { text: 'CSS', subcategory: 'css' },
-    { text: 'JavaScript', subcategory: 'js' },
-    { text: 'Vue', subcategory: 'vue' },
-    { text: '计算机网络', subcategory: 'network' },
-    { text: '浏览器', subcategory: 'browser' }
-  ]);
-}
-
-function sidebarInterview(): DefaultTheme.SidebarGroup[] {
-  return genSideBarGroup('interview', [
-    { text: '基础', subcategory: 'other' },
-    { text: 'JavaScript', subcategory: 'js' },
-    { text: '手写题', subcategory: 'handwriting' },
-    { text: '看输出', subcategory: 'for_output' }
-  ]);
-}
-
-function sidebarEngineer(): DefaultTheme.SidebarGroup[] {
-  return genSideBarGroup('engineer', [
-    { text: '工具', subcategory: 'packages' }
-  ]);
-}
-
-function genSideBarGroup(category: DocCategory, config: SidebarGroupConfig[]) {
-  return config.map(
-    ({ text, subcategory, collapsible = true, collapsed = false }) => {
-      return {
-        collapsible,
-        collapsed,
-        text,
-        items: genSideBarItems(category, subcategory)
-      };
-    }
-  );
-}
-
-function genSideBarItems(
-  category: DocCategory,
-  target: string
-): DefaultTheme.SidebarItem[] {
-  const dirPath = path.resolve(DOCS_DIR, category, target);
-  return glob.sync(dirPath + '/*.md').map((filePath: string) => {
-    const name = filePath.match(/.+\/(.+)\.md/)?.[1];
-    const link = `/${category}/${target}/${name}`;
-    return {
-      text: pathToTitle[link],
-      link
-    };
-  });
-}
 
 export default withImgPreview(config);
