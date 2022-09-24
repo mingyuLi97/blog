@@ -22,6 +22,7 @@ jobs:
           publish_dir: docs/.vitepress/dist
   algolia:
     needs: deploy
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Get the content of algolia.json as config
