@@ -59,8 +59,8 @@ function sidebarEngineer(): DefaultTheme.SidebarGroup[] {
  */
 function sidebarDesign(): DefaultTheme.SidebarGroup[] {
   return genSideBarGroup('design', [
-    { text: '数据结构', subcategory: 'data_structure' },
-    { text: '设计模式', subcategory: 'design_ pattern' }
+    { text: '数据结构', subcategory: 'data-structure' },
+    { text: '设计模式', subcategory: 'design-pattern' }
   ]);
 }
 
