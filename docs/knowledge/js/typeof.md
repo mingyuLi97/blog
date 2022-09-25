@@ -1,5 +1,9 @@
 # 数据类型检测
 
+## 原生数据类型
+
+undefined null boolean number symbol bigint object
+
 ## typeof
 
 原理：直接在计算机底层基于类型的值（二进制）进行检测
@@ -24,7 +28,7 @@ typeof function () {}; // function
 arr instanceof Object; // true
 1 instanceof Number; // false
 new Number(1) instanceof Number; // true
-"a" instanceof String; // false
+'a' instanceof String; // false
 ```
 
 弊端：
@@ -92,20 +96,20 @@ Object.prototype.toString.call(undefined); // "[object Undefined]"
 const class2type = {},
   toString = class2type.toString, // 等价于 Object.prototype.toString
   typeList =
-    "Boolean Number String Function Array Date RegExp Object Error".split(" ");
+    'Boolean Number String Function Array Date RegExp Object Error'.split(' ');
 
 // 设定数据类型的映射表
-typeList.forEach((name) => {
+typeList.forEach(name => {
   class2type[`[object ${name}]`] = name.toLowerCase();
 });
 
 function toType(obj) {
   if (obj == null) {
     // 如果传入的是 null 或者 undefined，返回对应的字符串
-    return obj + "";
+    return obj + '';
   }
-  return typeof obj === "object" || typeof obj === "function"
-    ? class2type[toString.call(obj)] || "object"
+  return typeof obj === 'object' || typeof obj === 'function'
+    ? class2type[toString.call(obj)] || 'object'
     : typeof obj;
 }
 ```
