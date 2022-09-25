@@ -24,7 +24,7 @@
 // index.html
 function jsonp({ url, params, callback }) {
   return new Promise((resolve, reject) => {
-    let script = document.createElement("script");
+    let script = document.createElement('script');
     window[callback] = function (data) {
       resolve(data);
       document.body.removeChild(script);
@@ -34,15 +34,15 @@ function jsonp({ url, params, callback }) {
     for (let key in params) {
       arrs.push(`${key}=${params[key]}`);
     }
-    script.src = `${url}?${arrs.join("&")}`;
+    script.src = `${url}?${arrs.join('&')}`;
     document.body.appendChild(script);
   });
 }
 jsonp({
-  url: "http://localhost:3000/say",
-  params: { wd: "Iloveyou" },
-  callback: "show",
-}).then((data) => {
+  url: 'http://localhost:3000/say',
+  params: { wd: 'Iloveyou' },
+  callback: 'show'
+}).then(data => {
   console.log(data);
 });
 ```
@@ -51,46 +51,49 @@ jsonp({
 
 > CORS 是一个 W3C 标准,全称是"跨域资源共享"（Cross-origin resource sharing），他允许浏览器向跨源服务器发送 XMLHttpRequest 请求，从而克服啦 AJAX 只能同源使用的限制
 
-### 简单请求与复杂请求
+### 简单请求
 
-某些请求不会触发 CORS 预检请求，这样的请求一般称为"简单请求",而会触发预检的请求则成为"复杂请求"。
+符合简单请求的配置(粗略), 详细的见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS#%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82)
 
-#### 简单请求
+1. 请求方法为 `GET、HEAD、POST` 之一
+2. 没有自定义 Headers
+3. Content-Type 必须为 `application/x-www-form-urlencoded、multipart/form-data、text/plain` 之一
+4. 请求中的任意 XMLHttpRequestUpload 对象均没有注册任何事件监听器；
+5. 请求中没有使用 ReadableStream 对象。
 
-1. 使用下列方法之一
+### 复杂请求
 
-- GET
-- HEAD
-- POST
+不符合简单请求的便是复杂请求，复杂请求会先发出预检请求
 
-2.  规范集合之内的头字段
+#### 预检请求 （OPTIONS）
 
-- Accept
-- Accept-Language
-- Content-Language
-- Content-Type 必须为：
-  - application/x-www-form-urlencoded
-  - multipart/form-data
-  - text/plain
-- DPR
-- Downlink
-- Save-Data
-- Viewport-Width/Width
+options 请求就是预检请求，可用于检测服务器允许的 http 方法。当发起跨域请求时，由于安全原因，触发一定条件时浏览器会在正式请求之前自动先发起 OPTIONS 请求，即 CORS 预检请求，服务器若接受该跨域请求，浏览器才继续发起正式请求。
 
-3. 请求中的任意 XMLHttpRequestUpload 对象均没有注册任何事件监听器；
-4. 请求中没有使用 ReadableStream 对象。
+优化：将 options 请求进行缓存，服务器端设置 Access-Control-Max-Age 字段
 
-#### 复杂请求
+### HTTP 请求首部字段
 
-1. 使用了下面任一 HTTP 方法，PUT/DELETE/CONNECT/OPTIONS/TRACE/PATCH
-2. 人为设置了以下集合之外首部字段，即简单请求外的字段
-3. Content-Type 的值不属于下列之一，即 application/x-www-form-urlencoded、multipart/form-data、text/plain
+:::tip
+这些首部字段无须手动设置。 当开发者使用 XMLHttpRequest 对象发起跨源请求时，它们已经被设置就绪。
+:::
 
-## OPTIONS 请求
+- `Origin` 首部字段表明预检请求或实际请求的源站。它不包含任何路径信息，只是服务器名称。
+- `Access-Control-Request-Method` 首部字段用于预检请求。其作用是，将实际请求所使用的 HTTP 方法告诉服务器。
+- `Access-Control-Request-Headers` 首部字段用于预检请求。其作用是，将实际请求所携带的首部字段告诉服务器。
 
-> options 请求就是预检请求，可用于检测服务器允许的 http 方法。当发起跨域请求时，由于安全原因，触发一定条件时浏览器会在正式请求之前自动先发起 OPTIONS 请求，即 CORS 预检请求，服务器若接受该跨域请求，浏览器才继续发起正式请求。
+### HTTP 响应首部字段
 
-### 优化
+- `Access-Control-Allow-Origin` 表示允许请求的域
+- `Access-Control-Expose-Headers` 服务器把允许浏览器访问的头放入白名单
 
-- 使用 jsonp
-- options 请求进行缓存，服务器端设置 Access-Control-Max-Age 字段
+:::tip
+在跨源访问时，XMLHttpRequest 对象的 [getResponseHeader()](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/getResponseHeader) 方法只能拿到一些最基本的响应头，Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma，如果要访问其他头，则需要服务器设置本响应头。
+:::
+
+- `Access-Control-Allow-Credentials` 表示允许携带 Cookie
+- `Access-Control-Allow-Methods` 表示允许的请求方法
+- `Access-Control-Allow-Headers` 表示允许携带的请求头
+
+## 参考
+
+- [MDN：CORS](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS)
