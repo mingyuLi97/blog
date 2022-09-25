@@ -28,6 +28,7 @@
   "/knowledge/html/h5": "HTML",
   "/knowledge/html/seo": "搜索引擎优化（SEO）",
   "/knowledge/js/arrow_function": "箭头函数",
+  "/knowledge/js/call_apply_bind": "apply、call、bind",
   "/knowledge/js/event_loop": "事件循环 EventLoop",
   "/knowledge/js/event": "事件冒泡",
   "/knowledge/js/gc": "垃圾回收机制",
