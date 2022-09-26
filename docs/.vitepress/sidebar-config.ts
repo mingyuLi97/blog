@@ -50,7 +50,8 @@ function sidebarInterview(): DefaultTheme.SidebarGroup[] {
  */
 function sidebarEngineer(): DefaultTheme.SidebarGroup[] {
   return genSideBarGroup('engineer', [
-    { text: '工具', subcategory: 'packages' }
+    { text: '工具', subcategory: 'packages' },
+    { text: '前端标准', subcategory: 'stander' }
   ]);
 }
 
@@ -60,7 +61,8 @@ function sidebarEngineer(): DefaultTheme.SidebarGroup[] {
 function sidebarDesign(): DefaultTheme.SidebarGroup[] {
   return genSideBarGroup('design', [
     { text: '数据结构', subcategory: 'data-structure' },
-    { text: '设计模式', subcategory: 'design-pattern' }
+    { text: '设计模式', subcategory: 'design-pattern' },
+    { text: '排序算法', subcategory: 'sort' }
   ]);
 }
 
