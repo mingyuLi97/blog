@@ -1,7 +1,7 @@
 # Proxy、Reflect
 
 <script setup>
-import '@components/proxy';
+// import '@components/proxy';
 </script>
 
 ## 代理 Proxy

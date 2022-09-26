@@ -8,7 +8,7 @@
 
 IIFE 模式：匿名函数自调用（闭包）
 
-<img src="/Users/limingyu/Library/Application Support/typora-user-images/image-20210821143057371.png" alt="image-20210821143057371" style="zoom: 25%;" />
+<!-- <img src="/Users/limingyu/Library/Application Support/typora-user-images/image-20210821143057371.png" alt="image-20210821143057371" style="zoom: 25%;" /> -->
 
 模块化规范
 

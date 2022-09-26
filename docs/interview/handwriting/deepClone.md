@@ -1,7 +1,7 @@
 # 深拷贝
 
 <script setup>
-import '@components/deepClone';
+// import '@components/deepClone';
 </script>
 
 ```javascript

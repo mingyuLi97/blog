@@ -307,6 +307,6 @@ function runCustomPromise() {
   });
 }
 
-runCustomPromise();
+// runCustomPromise();
 
 //#endregion main
