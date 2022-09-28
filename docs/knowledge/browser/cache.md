@@ -47,6 +47,28 @@ HTTP/1.0 可以设置 `pragma: no-cache` 来跳过缓存
 ETag 的精度更高，Last-Modified 的时间单位是秒，如果一个文件 1s 内修改了多次，Last-Modified 无法感知到每次的变化
 :::
 
+## 缓存位置
+
+它们的优先级是：(由上到下寻找，找到即返回；找不到则继续)
+
+#### 1. Service Worker
+
+1. Memory Cache、Disk Cache 都是由浏览器根据响应头判断的，而 Service Worker 是可以通过代码来控制的，更加灵活
+2. Service Worker 不是服务于某个特定页面的，而是服务于多个页面的。（按照同源策略）
+3. Service Worker 会常驻在浏览器中，即便注册它的页面已经关闭，Service Worker 也不会停止。本质上它是一个后台线程，只有你主动终结，或者浏览器回收，这个线程才会结束。
+
+应用场景：[借助 Service Worker 和 cacheStorage 缓存及离线开发](https://www.zhangxinxu.com/wordpress/2017/07/service-worker-cachestorage-offline-develop/)
+
+#### 2. Memory Cache
+
+#### 3. Disk Cache
+
+## 浏览器刷新
+
+打开网页，地址栏输入地址： 查找 disk cache 中是否有匹配。如有则使用；如没有则发送网络请求。
+普通刷新 (F5)：因为 TAB 并没有关闭，因此 memory cache 是可用的，会被优先使用(如果匹配的话)。其次才是 disk cache。
+强制刷新 (Ctrl + F5)：浏览器不使用缓存，因此发送的请求头部均带有 `Cache-control: no-cache`(为了兼容，还带了 `Pragma: no-cache`),服务器直接返回 200 和最新内容。
+
 ## 缓存方案
 
 目前的项目大多使用这种缓存方案的：
@@ -65,3 +87,4 @@ css、js、图片：强缓存，文件名带上 hash。
 
 - [掘金：前端浏览器缓存知识梳理](https://juejin.cn/post/6947936223126093861)
 - [思否：一篇文章理解前端缓存](https://segmentfault.com/a/1190000014669345)
+- [掘金：实践这一次,彻底搞懂浏览器缓存机制](https://juejin.cn/post/6844903764566999054)
