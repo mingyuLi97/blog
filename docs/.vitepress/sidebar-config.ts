@@ -27,6 +27,7 @@ function sidebarKnowledge(): DefaultTheme.SidebarGroup[] {
     { text: 'HTML', subcategory: 'html', collapsible: true, collapsed: false },
     { text: 'CSS', subcategory: 'css' },
     { text: 'JavaScript', subcategory: 'js' },
+    { text: 'TypeScript', subcategory: 'ts' },
     { text: 'Vue', subcategory: 'vue' },
     { text: '计算机网络', subcategory: 'network' },
     { text: '浏览器', subcategory: 'browser' }
@@ -41,7 +42,8 @@ function sidebarInterview(): DefaultTheme.SidebarGroup[] {
     { text: '基础', subcategory: 'other' },
     { text: 'JavaScript', subcategory: 'js' },
     { text: '手写题', subcategory: 'handwriting' },
-    { text: '看输出', subcategory: 'for_output' }
+    { text: '看输出', subcategory: 'for_output' },
+    { text: 'Vue', subcategory: 'vue' }
   ]);
 }
 

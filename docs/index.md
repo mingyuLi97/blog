@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /knowledge/html/h5
+      link: /knowledge/html/basic
     # - theme: alt
     #   text: 在 Gitee 上查看
     #   link: https://gitee.com/geeksdidi/kittyui
