@@ -53,7 +53,10 @@ function sidebarInterview(): DefaultTheme.SidebarGroup[] {
 function sidebarEngineer(): DefaultTheme.SidebarGroup[] {
   return genSideBarGroup('engineer', [
     { text: '工具', subcategory: 'packages' },
-    { text: '前端标准', subcategory: 'stander' }
+    { text: '前端标准', subcategory: 'stander' },
+    { text: 'babel', subcategory: 'babel' },
+    { text: 'rollup', subcategory: 'rollup' },
+    { text: 'webpack', subcategory: 'webpack' }
   ]);
 }
 
