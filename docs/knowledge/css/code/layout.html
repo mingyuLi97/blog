@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        margin-bottom: 10px;
+        list-style: none;
+      }
+      h2 {
+        text-align: center;
+      }
+
+      body {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .box {
+        line-height: 100px;
+        height: 100px;
+        text-align: center;
+      }
+      .card {
+        width: 400px;
+      }
+
+      .flex {
+        display: flex;
+      }
+      .relative {
+        position: relative;
+      }
+
+      .bg1 {
+        background-color: pink;
+      }
+
+      .bg2 {
+        background-color: seagreen;
+      }
+      .bg3 {
+        background-color: purple;
+      }
+    </style>
+
+    <!-- 两栏布局 -->
+    <style>
+      /* float */
+      .left {
+        width: 100px;
+        float: left;
+      }
+      .right {
+      }
+      /* flex */
+      .left-flex {
+        flex: 0 0 100px;
+      }
+      .right-flex {
+        flex: 1;
+      }
+
+      /* 定位 */
+      .left-position {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100px;
+      }
+      .right-position {
+        margin-left: 100px;
+      }
+    </style>
+    <!-- 三栏布局 -->
+    <style>
+      .t-left-flex {
+        flex: 0 0 100px;
+      }
+      .t-center-flex {
+        flex: 1 1 auto;
+      }
+      .t-right-flex {
+        flex: 0 0 100px;
+      }
+
+      .t-left-position {
+        position: absolute;
+        width: 100px;
+        left: 0;
+        top: 0;
+      }
+      .t-center-position {
+        width: auto;
+        margin: 0 100px;
+      }
+
+      .t-right-position {
+        position: absolute;
+        width: 100px;
+        right: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="card">
+      <h2>两栏布局</h2>
+      <li>
+        <div class="box left bg1">float</div>
+        <div class="box right bg2"></div>
+      </li>
+
+      <li class="flex">
+        <div class="box left-flex bg1">flex</div>
+        <div class="box right-flex bg2"></div>
+      </li>
+
+      <li class="relative">
+        <div class="box left-position bg1">绝对定位</div>
+        <div class="box right-position bg2"></div>
+      </li>
+    </ul>
+
+    <ul class="card">
+      <h2>三栏布局</h2>
+      <li class="flex">
+        <div class="box bg1 t-left-flex"></div>
+        <div class="box bg2 t-center-flex">flex</div>
+        <div class="box bg3 t-right-flex"></div>
+      </li>
+      <li class="relative">
+        <div class="box bg1 t-left-position"></div>
+        <div class="box bg2 t-center-position">绝对定位</div>
+        <div class="box bg3 t-right-position"></div>
+      </li>
+    </ul>
+  </body>
+</html>
