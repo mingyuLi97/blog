@@ -5,6 +5,7 @@
   "/design/design-pattern/visitor": "访问者模式",
   "/design/sort/bubbleSort": "冒泡排序",
   "/design/sort/heapSort": "堆排序",
+  "/design/sort/index": "排序",
   "/design/sort/insertionSort": "插入排序",
   "/design/sort/mergeSort": "归并合并",
   "/design/sort/selectionSort": "选择排序",
