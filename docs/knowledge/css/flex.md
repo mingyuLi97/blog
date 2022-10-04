@@ -1,5 +1,9 @@
 # flex
 
+:::warning TODO
+很老的总结，不是很好，暂时可以直接看 [阮一峰 Flex](https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+:::
+
 ## 1.原理
 
 - 给父盒子指定 `display:flex` 控制子盒子的位置和排列方式
@@ -46,6 +50,8 @@
 
   `stretch`：拉伸（子盒子不要给高度，将子盒子拉伸充满父盒子）
 
+  `baseline`： 项目的第一行文字的基线对齐。
+
 - **align-content**：设置侧轴上的子元素排列方式（多行 - 必须存在换行）
 
   `flex-start`：从头开始排列
@@ -71,7 +77,7 @@
 
 ## 3.子项属性
 
-- **flex**：属性定义子项目分配**剩余空间**，用 `flex` 来表示所占的**份数**
+- `flex`：属性定义子项目分配**剩余空间**，用 `flex` 来表示所占的**份数**
 
   ```css
   .item {
@@ -79,7 +85,7 @@
   }
   ```
 
-- **align-self**：控制自己在侧轴的排列方式
+- `align-self` 控制自己在侧轴的排列方式
 
   ```css
   span:nth-child(2) {
@@ -88,8 +94,17 @@
   }
   ```
 
-- **order**：定义盒子的排列顺序（默认为 0）
+- `order` 定义盒子的排列顺序（默认为 0）
+- `flex-grow` 属性定义项目的放大比例，默认为 0，即如果存在剩余空间，也不放大。
+- `flex-shrink` 属性定义了项目的缩小比例，默认为 1，即如果空间不足，该项目将缩小。
+
+:::tip
+
+如果所有项目的 flex-grow 属性都为 1，则它们将等分剩余空间（如果有的话）。如果一个项目的 flex-grow 属性为 2，其他项目都为 1，则前者占据的剩余空间将比其他项多一倍。
+
+:::
 
 ## 参考
 
 - [pink 老师视频教程](https://space.bilibili.com/415434293?from=search&seid=7794536082102280588)
+- [阮一峰：Flex 布局教程：语法篇](https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
