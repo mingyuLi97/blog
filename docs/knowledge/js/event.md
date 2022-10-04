@@ -74,39 +74,66 @@
       </div>
     </div>
     <script>
-      a.addEventListener("click", () => {
-        console.log("冒泡----a");
+      a.addEventListener('click', () => {
+        console.log('冒泡----a');
       });
-      c.addEventListener("click", () => {
-        console.log("冒泡----c");
+      c.addEventListener('click', () => {
+        console.log('冒泡----c');
       });
 
       a.addEventListener(
-        "click",
+        'click',
         () => {
-          console.log("捕获----a");
+          console.log('捕获----a');
         },
         true
       );
       b.addEventListener(
-        "click",
+        'click',
         () => {
-          console.log("捕获----b");
+          console.log('捕获----b');
         },
         true
       );
       c.addEventListener(
-        "click",
+        'click',
         () => {
-          console.log("捕获----c");
+          console.log('捕获----c');
         },
         true
       );
 
-      b.addEventListener("click", () => {
-        console.log("冒泡----b");
+      b.addEventListener('click', () => {
+        console.log('冒泡----b');
       });
     </script>
   </body>
 </html>
+```
+
+## 事件委托
+
+事件委托利用了事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。所有用到按钮的事件（多数鼠标事件和键盘事件）都适合采用事件委托技术， 使用事件委托可以节省内存。
+
+```javascript
+<ul>
+  <li>苹果</li>
+  <li>香蕉</li>
+  <li>凤梨</li>
+</ul>;
+
+// good
+document.querySelector('ul').onclick = event => {
+  const target = event.target;
+  if (target.nodeName === 'LI') {
+    console.log(target.innerHTML);
+  }
+};
+
+// bad
+document.querySelectorAll('li').forEach(e => {
+  e.onclick = function () {
+    console.log(this.innerHTML);
+  };
+});
 ```
