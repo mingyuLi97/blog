@@ -2,7 +2,7 @@
 
 ## Plugins
 
-#### [UglifyJsWebpackPlugin](<(https://webpack.docschina.org/plugins/uglifyjs-webpack-plugin/)>)
+#### [UglifyJsWebpackPlugin](https://webpack.docschina.org/plugins/uglifyjs-webpack-plugin/)
 
 此插件使用 uglify-js 压缩的 JavaScript，减少文件体积
 

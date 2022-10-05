@@ -16,7 +16,7 @@
   "/engineer/rollup/index": "rollup",
   "/engineer/stander/module": "模块化",
   "/engineer/webpack/build_flow": "打包流程",
-  "/engineer/webpack/index": "webpack",
+  "/engineer/webpack/index": "配置",
   "/index": "",
   "/interview/for_output/event-loop": "事件循环",
   "/interview/for_output/proto": "原型和原型链",
