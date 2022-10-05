@@ -37,6 +37,7 @@
   "/knowledge/browser/render": "渲染流程",
   "/knowledge/browser/repaint_reflow": "重绘 - 回流",
   "/knowledge/browser/ssr": "服务端渲染（SSR）",
+  "/knowledge/css/bem": "BEM",
   "/knowledge/css/bfc": "BFC",
   "/knowledge/css/box": "盒模型",
   "/knowledge/css/flex": "flex",
