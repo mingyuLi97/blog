@@ -11,6 +11,8 @@
   "/design/sort/mergeSort": "归并合并",
   "/design/sort/selectionSort": "选择排序",
   "/engineer/babel/babel": "Babel",
+  "/engineer/babel/plugin-transform-runtime": "@babel/plugin-transform-runtime",
+  "/engineer/babel/preset-env": "@babel/preset-env",
   "/engineer/git/index": "git",
   "/engineer/packages/yalc": "yalc",
   "/engineer/rollup/index": "rollup",
