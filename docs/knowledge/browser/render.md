@@ -11,6 +11,8 @@
 7. [浏览器解析 HTML](#浏览器解析-html)
 8. 浏览器布局渲染
 
+![](https://limy-1309594960.cos.ap-beijing.myqcloud.com/202210121040167.png)
+
 ## 浏览器解析 HTML
 
 1. 浏览器首先下载该地址所对应的 html 页面。
