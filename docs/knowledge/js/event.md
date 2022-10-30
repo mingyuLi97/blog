@@ -1,8 +1,12 @@
-# 事件冒泡
+# addEventListener
 
 ## 语法
 
-> target.addEventListener(type, listener, useCapture);
+```js
+addEventListener(type, listener);
+addEventListener(type, listener, options);
+addEventListener(type, listener, useCapture);
+```
 
 ## 参数
 
@@ -15,12 +19,129 @@
   回调函数
 
 - **useCapture**
+
   - true - 事件捕获模式
   - false - 事件冒泡模式
 
-## 详细文档 - [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)
+- **options**
 
-## 结论
+  - capture：一个布尔值，是否由捕获阶段开始传播
+  - once：一个布尔值，表示只监听一次
+  - signal： AbortSignal  的 abort() 方法被调用时，监听器会被移除
+  - passive：一个布尔值，设置为 `true` 时，表示 listener  永远不会调用 `preventDefault()`。如果 listener 仍然调用了这个函数，客户端将会忽略它并抛出一个控制台警告。
+
+:::tip 重点了解下 passive
+在触发一个事件的时候，浏览器并不知道用户是否会调用 preventDefault()，它需要等到事件处理函数执行完后，才能去执行默认行为，这样就会造成一定的卡顿。
+在大部分页面中，我们是不会主动调用 preventDefault()，这个方法的，但是浏览器仍然会等待，
+利用这一点，我们可以将 passive 设置为 true 以优化滚动的流畅度。
+
+:::details
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>passive</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        outline: 0;
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .box {
+        box-sizing: border-box;
+        width: 200px;
+        height: 300px;
+        overflow: scroll;
+        margin-top: 20px;
+      }
+
+      #boxL {
+        background-color: pink;
+      }
+      #boxL::before {
+        content: '1111';
+        position: absolute;
+        top: -20px;
+      }
+
+      #boxR {
+        background-color: rgb(255, 253, 192);
+      }
+      span {
+        display: block;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+      }
+      span:nth-of-type(odd) {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      passive: true
+      <div id="boxL" class="box"></div>
+      passive: false
+      <div id="boxR" class="box"></div>
+    </div>
+    <div id="count"></div>
+    <script>
+      function createSpan(i) {
+        const span = document.createElement('span');
+        span.innerText = i;
+        return span;
+      }
+      for (let i = 0; i < 10; i++) {
+        boxL.appendChild(createSpan(i));
+        boxR.appendChild(createSpan(i));
+      }
+      function handle() {
+        let i = 10000;
+        while (i-- > 0) {
+          count.innerText = i;
+        }
+      }
+
+      boxL.addEventListener(
+        'touchmove',
+        e => {
+          handle();
+          // e.preventDefault();
+        },
+        {
+          passive: true
+        }
+      );
+
+      boxR.addEventListener(
+        'touchmove',
+        e => {
+          handle();
+          // e.preventDefault();
+        },
+        {
+          passive: false
+        }
+      );
+    </script>
+  </body>
+</html>
+```
+
+:::
+
+## DOM 事件流
 
 1. DOM 事件流的 3 个阶段 (假定点击了盒子 c)
    - 捕获阶段 - 向内传播
@@ -33,7 +154,7 @@
    - 先捕获后冒泡
    - 在执行目标阶段时，执行顺序按照注册顺序执行
 
-## 完整代码
+:::details 演示代码
 
 ```html
 <!DOCTYPE html>
@@ -111,6 +232,8 @@
 </html>
 ```
 
+:::
+
 ## 事件委托
 
 事件委托利用了事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。所有用到按钮的事件（多数鼠标事件和键盘事件）都适合采用事件委托技术， 使用事件委托可以节省内存。
@@ -137,3 +260,7 @@ document.querySelectorAll('li').forEach(e => {
   };
 });
 ```
+
+## 参考
+
+- [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)

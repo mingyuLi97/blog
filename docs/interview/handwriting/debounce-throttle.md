@@ -60,6 +60,24 @@ function throttle(fn, time = 1000) {
     }
   };
 }
+
+// 保证最后一次一定执行
+function throttle1(fn, time) {
+  let pre = new Date().getTime();
+  let timer = null;
+  return function (...args) {
+    const now = new Date().getTime();
+    if (now >= pre + time) {
+      fn.apply(this, args);
+      pre = now;
+    } else {
+      timer && clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn.apply(this, args);
+      }, time);
+    }
+  };
+}
 ```
 
 <DebounceAndThrottle type='throttle'/>
