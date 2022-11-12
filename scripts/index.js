@@ -7,6 +7,7 @@ const prettier = require('prettier');
 const pwd = process.cwd();
 
 const MDFiles = glob.sync(pwd + '/docs/**/*.md');
+console.log(`[index] `, MDFiles);
 const PathToJsonFile = path.resolve(pwd, 'docs/.vitepress/pathToTitle.json');
 const map = {};
 

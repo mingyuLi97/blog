@@ -5,7 +5,12 @@ import { DefaultTheme } from 'vitepress';
 
 const DOCS_DIR = path.resolve(process.cwd(), 'docs');
 
-type DocCategory = 'knowledge' | 'interview' | 'design' | 'engineer';
+type DocCategory =
+  | 'knowledge'
+  | 'interview'
+  | 'design'
+  | 'engineer'
+  | 'book-note';
 
 type SidebarGroupConfig = Omit<DefaultTheme.SidebarGroup, 'items'> & {
   subcategory: string;
@@ -16,7 +21,8 @@ export function getSidebarConfig() {
     '/knowledge/': sidebarKnowledge(),
     '/interview/': sidebarInterview(),
     '/engineer/': sidebarEngineer(),
-    '/design/': sidebarDesign()
+    '/design/': sidebarDesign(),
+    '/book-note/': sideBarBookNote()
   };
 }
 /**
@@ -68,6 +74,12 @@ function sidebarDesign(): DefaultTheme.SidebarGroup[] {
     { text: '数据结构', subcategory: 'data-structure' },
     { text: '设计模式', subcategory: 'design-pattern' },
     { text: '排序算法', subcategory: 'sort' }
+  ]);
+}
+
+function sideBarBookNote(): DefaultTheme.SidebarGroup[] {
+  return genSideBarGroup('book-note', [
+    { text: 'Vue.js设计与实现', subcategory: 'vuejs-design' }
   ]);
 }
 

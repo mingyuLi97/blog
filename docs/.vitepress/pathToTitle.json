@@ -1,4 +1,6 @@
 {
+  "/book-note/vuejs-design/1": "第一章：权衡的艺术",
+  "/book-note/vuejs-design/index": "Vue.js 设计与实现",
   "/design/data-structure/linked_list": "链表",
   "/design/design-pattern/observer": "观察者模式",
   "/design/design-pattern/publishers_subscribers": "发布订阅模式",
@@ -50,7 +52,7 @@
   "/knowledge/js/arrow_function": "箭头函数",
   "/knowledge/js/call_apply_bind": "apply、call、bind",
   "/knowledge/js/event_loop": "事件循环 EventLoop",
-  "/knowledge/js/event": "事件冒泡",
+  "/knowledge/js/event": "addEventListener",
   "/knowledge/js/gc": "垃圾回收机制",
   "/knowledge/js/map_set": "Set 和 Map 数据结构",
   "/knowledge/js/new": "new 操作符",
