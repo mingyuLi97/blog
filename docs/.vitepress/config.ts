@@ -18,7 +18,8 @@ const config = defineConfig({
       { text: '基础知识', link: '/knowledge/html/basic' },
       { text: '编程思想', link: '/design/design-pattern/observer' },
       { text: '工程化', link: '/engineer/packages/yalc' },
-      // { text: '面试题', link: '/interview/index' },
+      { text: '读书笔记', link: '/book-note/vuejs-design/1' },
+      { text: '面试题', link: '/interview/index' },
       { text: '我的掘金', link: 'https://juejin.cn/user/2383396941081934' }
     ],
     socialLinks: [

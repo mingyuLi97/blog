@@ -23,6 +23,7 @@ const debounceAdd = debounce(addNum);
 const throttleAdd = throttle(addNum);
 
 function addNum(target: 'a' | 'b') {
+  console.log(`[DebounceAndThrottle] `, numA);
   target === 'a' ? numA.value++ : numB.value++;
 }
 
