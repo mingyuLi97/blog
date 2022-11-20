@@ -22,6 +22,9 @@ HTTP/1.0 可以设置 `pragma: no-cache` 来跳过缓存
 - `max-age=xxx`：过期时间单位秒（解决了 Expires 自己修改本地时间的问题）
 - `no-cache`：不进行强缓存；
 - `no-store`：不强缓存，也不协商缓存
+- `no-transform`：不对传输的内容做任何转码（常见的地方为 proxy 或 browser 为了减少传输内容及流量，会对传输的图片等进行格式转换，此配置可以避免转换）
+
+![](https://limy-1309594960.cos.ap-beijing.myqcloud.com/202211201401042.webp)
 
 ## 协商缓存
 
@@ -88,3 +91,4 @@ css、js、图片：强缓存，文件名带上 hash。
 - [掘金：前端浏览器缓存知识梳理](https://juejin.cn/post/6947936223126093861)
 - [思否：一篇文章理解前端缓存](https://segmentfault.com/a/1190000014669345)
 - [掘金：实践这一次,彻底搞懂浏览器缓存机制](https://juejin.cn/post/6844903764566999054)
+- [blog](https://blog.camel2243.com/2018/09/23/http-http-header%EF%BC%8C-cache-control-expires-%E7%94%A8%E6%B3%95%E8%AA%AA%E6%98%8E/)

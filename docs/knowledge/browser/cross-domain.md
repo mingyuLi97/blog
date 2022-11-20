@@ -55,11 +55,11 @@ jsonp({
 
 符合简单请求的配置(粗略), 详细的见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS#%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82)
 
-1. 请求方法为 `GET、HEAD、POST` 之一
+1. 请求方法为 GET、HEAD、POST 之一
 2. 没有自定义 Headers
-3. Content-Type 必须为 `application/x-www-form-urlencoded、multipart/form-data、text/plain` 之一
-4. 请求中的任意 XMLHttpRequestUpload 对象均没有注册任何事件监听器；
-5. 请求中没有使用 ReadableStream 对象。
+3. Content-Type 必须为 `application/x-www-form-urlencoded`、`multipart/form-data`、`text/plain` 之一
+4. 给定一个 XMLHttpRequest 实例 xhr，没有调用 `xhr.upload.addEventListener()`，以监听该上传请求。
+5. 请求中没有使用 [ReadableStream](https://developer.mozilla.org/zh-CN/docs/Web/API/ReadableStream) 对象。
 
 ### 复杂请求
 
