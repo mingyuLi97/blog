@@ -216,3 +216,40 @@ watch(
   { immediate: false }
 );
 obj.foo++;
+
+function reactive(obj) {
+  return createReactive(obj);
+}
+
+function shallowReactive(obj) {
+  return createReactive(obj, true);
+}
+
+function createReactive(obj, isShallow = false) {
+  return new Proxy(obj, {
+    get(target, key, receiver) {
+      // 将 activeEffect 存储的副作用函数收集到桶里
+      track(target, key);
+      const res = Reflect.get(target, key, receiver);
+      if (isShallow) return res;
+      if (typeof res === 'object' && res !== null) {
+        return reactive(res);
+      }
+      return res;
+    },
+    set(target, key, val) {
+      target[key] = val;
+      // 将副作用函数从 桶 中取出来并调用
+      trigger(target, key);
+    }
+  });
+}
+const data1 = { a: 1, b: { c: 1 } };
+
+const obj1 = shallowReactive(data1);
+
+effect(() => {
+  console.log('obj1.b.c', obj1.b.c);
+});
+
+obj1.b.c++;
