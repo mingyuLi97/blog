@@ -5,6 +5,8 @@
   "/book-note/vuejs-design/4": "第四章：响应系统的作用与实现",
   "/book-note/vuejs-design/5": "第五章：非原始值的响应式方案",
   "/book-note/vuejs-design/6": "第六章：原始值的响应式方案",
+  "/book-note/vuejs-design/7": "第七章：渲染器的设计",
+  "/book-note/vuejs-design/8": "第八章：挂载与更新",
   "/book-note/vuejs-design/index": "Vue.js 设计与实现",
   "/design/data-structure/linked_list": "链表",
   "/design/design-pattern/observer": "观察者模式",
