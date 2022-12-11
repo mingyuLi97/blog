@@ -73,7 +73,8 @@ function sidebarDesign(): DefaultTheme.SidebarGroup[] {
   return genSideBarGroup('design', [
     { text: '数据结构', subcategory: 'data-structure' },
     { text: '设计模式', subcategory: 'design-pattern' },
-    { text: '排序算法', subcategory: 'sort' }
+    { text: '排序算法', subcategory: 'sort' },
+    { text: '思想', subcategory: 'experience' }
   ]);
 }
 
