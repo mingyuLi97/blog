@@ -25,6 +25,7 @@
   "/engineer/babel/plugin-transform-runtime": "@babel/plugin-transform-runtime",
   "/engineer/babel/preset-env": "@babel/preset-env",
   "/engineer/git/index": "git",
+  "/engineer/packages/esbuild": "Esbuild",
   "/engineer/packages/ffmpeg": "ffmpeg",
   "/engineer/packages/yalc": "yalc",
   "/engineer/rollup/index": "rollup",
