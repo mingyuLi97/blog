@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,a as l}from"./app.04c0d76f.js";const d=JSON.parse('{"title":"Babel","description":"","frontmatter":{},"headers":[],"relativePath":"engineer/babel/babel.md"}'),e={name:"engineer/babel/babel.md"},p=l("",2),o=[p];function c(t,B,r,i,y,_){return a(),n("div",null,o)}const b=s(e,[["render",c]]);export{d as __pageData,b as default};
