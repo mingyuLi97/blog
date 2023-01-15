@@ -1,5 +1,18 @@
 # Slot
 
+## 介绍
+
+插槽是组件中用来占位的标签，允许传递外部自定义的结构，从而更好的复用组件。
+可以这么理解，与 Props 类似，props 传递的是数据，插槽传递的是的结构。
+
+## 分类
+
+- 默认插槽
+- 具名插槽
+- 作用域插槽
+
+## 代码展示
+
 ```html
 <body>
   <section id="app">
@@ -52,6 +65,8 @@
   </script>
 </body>
 ```
+
+## 原理
 
 工具函数介绍
 
@@ -126,4 +141,6 @@ _c('div', { staticClass: 'container' }, [
 8. 调用 render 函数
    1. 调用 `_t: renderSlot`, 在 $scopedSlots 中通过 name 匹配出对应的函数并执行,得到插槽的 vnode 插入到当前子组件
 
-## Vue2
+#### 原理总结
+
+在模版编译时，如果发现组件中存在子组件，那么就会将它们当作插槽，根据名称将其分为两类、默认插槽和作用域插槽，默认插槽放置在 children 中， 作用域插槽放在 scopedSlots 中。render 执行时，默认插槽会被编译成 vnode，scopedSlots 编译成函数。子组件 init 时，将父组件传递的 children 转换成 $slot, 并与父组件上的 scopedSlots 合并，生成 $scopedSlots。子组件 render 函数执行时，根据插槽的 name 在 $scopedSlots 取出对应的值，如果是 vnode 就直接使用，如果是函数就将数据传递并调用返回 vnode.
