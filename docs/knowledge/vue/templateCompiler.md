@@ -1,5 +1,11 @@
 # 模版解析
 
+Vue 模版解析就是将开发者输入的模版字符串转换成 render 函数。此过程分为三个阶段
+
+1. 解析字符串生成虚拟 DOM
+2. 执行编译优化，递归遍历 AST，标记静态节点和静态根节点
+3. 生成 render 函数
+
 ## 总流程
 
 ![总流程](https://limy-1309594960.cos.ap-beijing.myqcloud.com/202301201428179.png)
@@ -106,6 +112,20 @@ with (this) {
 ## 为什么使用 with 语句？
 
 vue 并没有对模板中的 javascript 表达式进行 ast 语法分析，如果要移除 `with`，就需要对 javascript 表达式进行 ast 语法分析，并且还需要一个专门的解释器对 ast 语法树进行解释，这样就会导致存在两个并行的解析器，这样维护成本高，还可能会有潜在的 bug 风险。
+
+## template 和 render 函数的区别
+
+Vue 支持 template 模版和 render 函数两种渲染方式，
+如果同时使用两者，会优先采用 render 的方式。
+本质上，模版最终也会编译成 render 函数。
+模版的写法更贴近于 html，因此其看起来很直观，render 函数本身是 js，因此更灵活。
+
+:::tip
+Vue 分为完整版（vue.min.js）和运行时（vue.runtime.min.js）两个版本
+
+- 完整版内置了 complier，因此可以在运行时处理 template 语法，但是其包体积较大。
+- 运行时仅支持 render 函数，是官方默认的版本。（一般情况下模版编译是在项目本地打包的时候处理）。
+  :::
 
 ## 参考
 
