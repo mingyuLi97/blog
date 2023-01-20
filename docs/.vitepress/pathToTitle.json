@@ -92,6 +92,7 @@
   "/knowledge/vue/nextTick": "nextTick",
   "/knowledge/vue/pinia": "Pinia",
   "/knowledge/vue/slot": "Slot",
+  "/knowledge/vue/templateCompiler": "模版解析",
   "/knowledge/vue/v-model": "v-model",
   "/knowledge/vue/vuex": "vuex",
   "/knowledge/vue/watcher": "watcher"
