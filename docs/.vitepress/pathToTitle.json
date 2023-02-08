@@ -65,6 +65,7 @@
   "/knowledge/js/arrow_function": "箭头函数",
   "/knowledge/js/call_apply_bind": "apply、call、bind",
   "/knowledge/js/event": "addEventListener",
+  "/knowledge/js/generator": "Generator",
   "/knowledge/js/map_set": "Set 和 Map 数据结构",
   "/knowledge/js/new": "new 操作符",
   "/knowledge/js/promise": "Promise",
