@@ -5,7 +5,8 @@ const COMPONENTS_DIR = path.resolve(process.cwd(), 'components');
 export function getViteConfig() {
   return {
     server: {
-      open: true
+      open: true,
+      hmr: {}
     },
     resolve: {
       alias: {
