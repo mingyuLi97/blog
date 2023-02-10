@@ -3,7 +3,7 @@ import { withImgPreview } from './img-overlay';
 import anchor from 'markdown-it-anchor';
 import { getViteConfig } from './vite-config';
 import { getMarkDownConfig } from './markdown-config';
-import { getSidebarConfig } from './sidebar-config';
+import { getSidebarConfig } from './auto-sidebar';
 
 const config = defineConfig({
   vite: getViteConfig(),

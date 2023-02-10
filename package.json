@@ -5,8 +5,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "predev": "node ./scripts/index.js",
-    "prebuild": "node ./scripts/index.js",
     "dev": "vitepress dev docs --host",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
@@ -22,6 +20,7 @@
   },
   "devDependencies": {
     "@limy-org/prettier-config": "^1.0.0",
+    "@types/glob": "^8.0.1",
     "@types/node": "^18.7.6",
     "@types/prettier": "^2.7.0",
     "glob": "^8.0.3",
