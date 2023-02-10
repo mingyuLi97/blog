@@ -3,7 +3,7 @@ import { withImgPreview } from './img-overlay';
 import anchor from 'markdown-it-anchor';
 import { getViteConfig } from './vite-config';
 import { getMarkDownConfig } from './markdown-config';
-import { getSidebarConfig } from './auto-sidebar';
+import { SidebarConfig } from './auto-sidebar';
 
 const config = defineConfig({
   vite: getViteConfig(),
@@ -28,7 +28,7 @@ const config = defineConfig({
         link: 'https://github.com/mingyuLi97'
       }
     ],
-    sidebar: getSidebarConfig(),
+    sidebar: SidebarConfig,
     algolia: {
       appId: 'H6NWHVLNUL',
       apiKey: 'a7233c5dfa7ed655817ff82d5e8dfa5c',

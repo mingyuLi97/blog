@@ -15,10 +15,8 @@ export default function VitePluginAutoSidebar(
   options: AutoSidebarOptions = {}
 ) {
   const updateSidebar = () => {
-    const content = `export default function() {
-    return ${JSON.stringify(getSidebarConfig(options))};
-  }`;
-    fs.writeFileSync(SIDEBAR_PATH, content + '\n');
+    const config = getSidebarConfig(options);
+    fs.writeFileSync(SIDEBAR_PATH, `export default ${JSON.stringify(config)};`);
   };
 
   return <Plugin>{

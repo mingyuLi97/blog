@@ -21,7 +21,14 @@ export function getViteConfig() {
             'book-note/vuejs-design': { text: 'Vue.js设计与实现' },
             'design/data-structure': { text: '数据结构' },
             'design/design-pattern': { text: '设计模式' },
-            'design/sort': { text: '排序算法' },
+            'design/sort': {
+              text: '排序算法',
+              after(config) {
+                config.items.sort((a, b) => {
+                  return a.text === '排序' ? 1 : -1;
+                });
+              }
+            },
             'design/experience': { text: '思想' },
             'design/leetcode': { text: '力扣' },
             'engineer/packages': { text: '工具' },

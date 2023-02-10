@@ -1,7 +1,7 @@
 import VitePluginAutoSidebar from './vite-plugin-auto-sidebar';
-import getSidebarConfig from './sidebar';
+import SidebarConfig from './sidebar';
 
 export default VitePluginAutoSidebar;
 
 export * from './types';
-export { getSidebarConfig };
+export { SidebarConfig };

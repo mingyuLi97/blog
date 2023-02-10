@@ -1,7 +1,7 @@
 import type { DefaultTheme } from 'vitepress';
 
 export type SidebarGroup = Omit<DefaultTheme.SidebarGroup, 'items'> & {
-  after?: (items: DefaultTheme.SidebarGroup) => void;
+  after?: (sidebarGroup: DefaultTheme.SidebarGroup) => void;
 };
 
 export interface AutoSidebarOptions {
