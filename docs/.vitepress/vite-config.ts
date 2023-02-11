@@ -17,10 +17,10 @@ export function getViteConfig() {
     plugins: [
       VitePluginAutoSidebar({
         resolveSidebarGroup(id) {
-          const map: Record<string, SidebarGroup> = {
-            'book-note/vuejs-design': { text: 'Vue.js设计与实现' },
-            'design/data-structure': { text: '数据结构' },
-            'design/design-pattern': { text: '设计模式' },
+          const map: Record<string, SidebarGroup | string> = {
+            'book-note/vuejs-design': 'Vue.js设计与实现',
+            'design/data-structure': '数据结构',
+            'design/design-pattern': '设计模式',
             'design/sort': {
               text: '排序算法',
               after(config) {

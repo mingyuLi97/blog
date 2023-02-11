@@ -18,6 +18,7 @@ export default function VitePluginAutoSidebar(
     const config = getSidebarConfig(options);
     fs.writeFileSync(SIDEBAR_PATH, `export default ${JSON.stringify(config)};`);
   };
+  updateSidebar();
 
   return <Plugin>{
     name: 'VitePluginAutoSidebar',
@@ -41,9 +42,6 @@ export default function VitePluginAutoSidebar(
           return;
         }
       });
-    },
-    buildStart() {
-      updateSidebar();
     }
   };
 }
@@ -80,7 +78,12 @@ function getSidebarConfig(options: AutoSidebarOptions) {
     for (const level_2 of Object.keys(tree[level_1])) {
       // 因为第二级目录有一些配置参数，所以允许用户自定义配置
       // 相对路径 knowledge/css
-      const userConfig = resolveSidebarGroup(`${level_1}/${level_2}`) || {};
+      const res = resolveSidebarGroup(`${level_1}/${level_2}`);
+      let userConfig: SidebarGroup = {};
+      if (res) {
+        userConfig = typeof res === 'string' ? { text: res } : res;
+      }
+
       const config = {
         collapsible: true,
         collapsed: false,

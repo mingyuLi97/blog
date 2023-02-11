@@ -5,6 +5,6 @@ export type SidebarGroup = Omit<DefaultTheme.SidebarGroup, 'items'> & {
 };
 
 export interface AutoSidebarOptions {
-  resolveSidebarGroup?: (id: string) => SidebarGroup | undefined;
+  resolveSidebarGroup?: (id: string) => SidebarGroup | string | undefined;
   docsPath?: string;
 }
