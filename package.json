@@ -8,7 +8,7 @@
     "dev": "vitepress dev docs --host",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
-    "deploy": "git add . && git commit -m \"deploy: 🚀\"",
+    "deploy": "git add . && git-cz",
     "postdeploy": "git push"
   },
   "dependencies": {
