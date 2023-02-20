@@ -7,9 +7,24 @@ import type { DefaultTheme } from 'vitepress';
 import type { AutoSidebarOptions, SidebarGroup } from './types';
 
 const context = process.cwd();
-const DOCS_DIR = path.resolve(context, 'docs');
+const ROOT = path.resolve(context, 'docs');
 const SIDEBAR_PATH = path.resolve(__dirname, 'sidebar.ts');
 const titleCache: Record<string, string> = {};
+
+/**
+ * 获取基于 ROOT 的全路径
+ */
+function getFullPath(...args: string[]) {
+  return path.resolve(ROOT, ...args);
+}
+
+function getRelativePath(p: string) {
+  return path.relative(ROOT, p);
+}
+
+function pathToRoute(p: string) {
+  return getRelativePath(p).replace('.md', '');
+}
 
 export default function VitePluginAutoSidebar(
   options: AutoSidebarOptions = {}
@@ -24,7 +39,7 @@ export default function VitePluginAutoSidebar(
     name: 'VitePluginAutoSidebar',
     configureServer: ({ watcher }: ViteDevServer) => {
       const fsWatcher = watcher.add('*.md');
-      fsWatcher.on('all', (event, path) => {
+      fsWatcher.on('all', (event, filePath) => {
         if (event === 'addDir') return;
         if (event === 'unlinkDir') return;
         if (event == 'add') return;
@@ -33,11 +48,11 @@ export default function VitePluginAutoSidebar(
           return;
         }
         if (event === 'change') {
-          const k = matchPath(path);
-          const title = matchTitle(path);
-          if (!k || !title) return;
+          const route = pathToRoute(filePath);
+          const title = matchTitle(filePath);
+          if (!route || !title) return;
           // 未更新 title
-          if (title === titleCache[k]) return;
+          if (title === titleCache[route]) return;
           updateSidebar();
           return;
         }
@@ -48,7 +63,7 @@ export default function VitePluginAutoSidebar(
 
 function getPathTree(): Record<string, any> {
   const paths = glob.sync('**/*.md', {
-    cwd: DOCS_DIR,
+    cwd: ROOT,
     ignore: ['public/**.md', 'index.md']
   });
   const tree = {};
@@ -88,7 +103,7 @@ function getSidebarConfig(options: AutoSidebarOptions) {
         collapsible: true,
         collapsed: false,
         text: level_2,
-        items: genSideBarItems(level_1, level_2),
+        items: genSideBarItems(getFullPath(level_1, level_2)),
         ...userConfig
       };
       if (typeof userConfig.after === 'function') {
@@ -98,29 +113,20 @@ function getSidebarConfig(options: AutoSidebarOptions) {
       sidebarGroups.push(config);
     }
   }
+  console.log(`[vite-plugin-auto-sidebar] `, titleCache);
   return sidebar;
 }
 
-function genSideBarItems(
-  category: string,
-  target: string
-): DefaultTheme.SidebarItem[] {
-  const dirPath = path.resolve(DOCS_DIR, category, target);
+function genSideBarItems(dirPath: string): DefaultTheme.SidebarItem[] {
   return glob.sync(dirPath + '/*.md').map((filePath: string) => {
-    const name = filePath.match(/.+\/(.+)\.md/)?.[1];
-    const link = `/${category}/${target}/${name}`;
+    const route = pathToRoute(filePath);
     const text = matchTitle(filePath);
-    titleCache[link] = text;
+    titleCache[route] = text;
     return {
       text,
-      link
+      link: route
     };
   });
-}
-
-function matchPath(p: string) {
-  const m = p.match(/blog\/docs(.*).md/);
-  return m ? m[1] : null;
 }
 
 function matchTitle(p: string) {
