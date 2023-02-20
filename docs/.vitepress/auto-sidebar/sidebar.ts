@@ -105,6 +105,12 @@ export default {
     {
       collapsible: true,
       collapsed: false,
+      text: 'linux',
+      items: [{ text: '基础命令', link: 'engineer/linux/command' }]
+    },
+    {
+      collapsible: true,
+      collapsed: false,
       text: '工具',
       items: [
         { text: 'Esbuild', link: 'engineer/packages/esbuild' },
