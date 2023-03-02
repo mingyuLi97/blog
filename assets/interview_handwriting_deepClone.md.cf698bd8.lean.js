@@ -1,0 +1,1 @@
+import{o as s,c as n,a}from"./app.384674d5.js";const l=a("",2),p=[l],r=JSON.parse('{"title":"\u6DF1\u62F7\u8D1D","description":"","frontmatter":{},"headers":[],"relativePath":"interview/handwriting/deepClone.md"}'),o={name:"interview/handwriting/deepClone.md"},y=Object.assign(o,{setup(B){return(e,t)=>(s(),n("div",null,p))}});export{r as __pageData,y as default};
