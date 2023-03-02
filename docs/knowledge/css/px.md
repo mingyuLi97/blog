@@ -1,4 +1,15 @@
-# 移动端布局单位
+# 移动端布局
+
+## meta 设置
+
+首先移动端要设置好视口 `viewport`，标识该网页是移动端网页，从而避免点击 [300ms 延迟](https://juejin.cn/post/6844904031026937864) 的问题
+
+```html
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"
+/>
+```
 
 ## em
 

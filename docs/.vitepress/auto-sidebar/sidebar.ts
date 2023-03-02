@@ -218,7 +218,7 @@ export default {
         { text: 'BFC', link: 'knowledge/css/bfc' },
         { text: '盒模型', link: 'knowledge/css/box' },
         { text: 'flex', link: 'knowledge/css/flex' },
-        { text: '移动端布局单位', link: 'knowledge/css/px' }
+        { text: '移动端布局', link: 'knowledge/css/px' }
       ]
     },
     {
