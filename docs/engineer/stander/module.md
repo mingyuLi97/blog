@@ -12,7 +12,7 @@ IIFE 模式：匿名函数自调用（闭包）
 
 模块化规范
 
-### commonjs（CJS）
+## commonjs（CJS）
 
 规范：
 
@@ -53,7 +53,14 @@ IIFE 模式：匿名函数自调用（闭包）
   module3.bar();
   ```
 
-### amd - requirejs
+:::tip 为什么不能用于浏览器
+
+1. 模块加载器由 Node.js 提供，依赖了 Node.js 本身的功能实现，比如文件系统。
+2. CommonJS 本身约定以同步的方式进行模块加载，这种加载机制放在服务端是没问题的，一来模块都在本地，不需要进行网络 IO，二来只有服务启动时才会加载模块，而服务通常启动后会一直运行，所以对服务的性能并没有太大的影响。但如果这种加载机制放到浏览器端，会带来明显的性能问题。它会产生大量同步的模块请求，浏览器要等待响应返回后才能继续解析模块。也就是说，**模块请求会造成浏览器 JS 解析过程的阻塞**，导致页面加载速度缓慢。
+
+:::
+
+## amd - requirejs
 
 语法：
 
@@ -101,7 +108,7 @@ define(function () {
 })();
 ```
 
-### cmd【了解】
+## cmd【了解】
 
 [gitee](https://gitee.com/Lee_sparkling/js-modular-specification/tree/master)
 
@@ -129,11 +136,12 @@ define(function (require, exports, module) {
 });
 ```
 
-### umd
+## umd
 
+所谓 UMD (Universal Module Definition)，就是一种 javascript 通用模块定义规范，让你的模块能在 javascript 所有运行环境中发挥作用。
 [umd](https://juejin.cn/post/6844903927104667662#heading-0)
 
-### es6
+## esm
 
 > ES6 部分浏览器不支持，我们需要编译后才能在浏览器中使用，步骤如下：
 >
