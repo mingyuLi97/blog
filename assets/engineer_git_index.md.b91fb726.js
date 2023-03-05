@@ -1,0 +1,8 @@
+import{_ as e,o as s,c as a,a as n}from"./app.f6cf37cd.js";const g=JSON.parse('{"title":"git","description":"","frontmatter":{},"headers":[{"level":2,"title":"commit","slug":"commit","link":"#commit","children":[]},{"level":2,"title":"reset","slug":"reset","link":"#reset","children":[]}],"relativePath":"engineer/git/index.md"}'),t={name:"engineer/git/index.md"},i=n(`<h1 id="git" tabindex="-1">git <a class="header-anchor" href="#git" aria-hidden="true">#</a></h1><h2 id="commit" tabindex="-1">commit <a class="header-anchor" href="#commit" aria-hidden="true">#</a></h2><p>\u64A4\u9500 commit</p><div class="language-bash"><button class="copy"></button><span class="lang">bash</span><pre><code><span class="line"><span style="color:#7F848E;"># \u64A4\u56DE commit \u4FDD\u7559\u4EE3\u7801</span></span>
+<span class="line"><span style="color:#7F848E;"># HEAD^ \u6307\u7684\u4E0A\u4E00\u4E2A\u7248\u672C  \u64A4\u56DE\u591A\u6B21\u53EF\u4EE5\u4F7F\u7528 HEAD~xxx( \u{1F330} HEAD~2)</span></span>
+<span class="line"><span style="color:#ABB2BF;">git reset --soft HEAD^</span></span>
+<span class="line"><span style="color:#7F848E;">#</span></span>
+<span class="line"><span style="color:#ABB2BF;">--hard</span></span>
+<span class="line"><span style="color:#7F848E;"># \u4FEE\u6539\u63D0\u4EA4\u7684 message</span></span>
+<span class="line"><span style="color:#ABB2BF;">--amend</span></span>
+<span class="line"></span></code></pre></div><h2 id="reset" tabindex="-1">reset <a class="header-anchor" href="#reset" aria-hidden="true">#</a></h2><ol><li>\u64A4\u9500 commit</li></ol>`,6),l=[i];function c(o,r,p,d,h,m){return s(),a("div",null,l)}const u=e(t,[["render",c]]);export{g as __pageData,u as default};

@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,a as l}from"./app.f6cf37cd.js";const C=JSON.parse('{"title":"\u5F52\u5E76\u5408\u5E76","description":"","frontmatter":{},"headers":[],"relativePath":"design/sort/mergeSort.md"}'),p={name:"design/sort/mergeSort.md"},o=l("",3),B=[o];function r(e,t,c,y,A,F){return n(),a("div",null,B)}const E=s(p,[["render",r]]);export{C as __pageData,E as default};
