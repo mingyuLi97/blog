@@ -206,7 +206,8 @@ export default {
         },
         { text: '渲染流程', link: 'knowledge/browser/render' },
         { text: '重绘 - 回流', link: 'knowledge/browser/repaint_reflow' },
-        { text: '服务端渲染（SSR）', link: 'knowledge/browser/ssr' }
+        { text: '服务端渲染（SSR）', link: 'knowledge/browser/ssr' },
+        { text: 'Web 性能指标', link: 'knowledge/browser/vitals' }
       ]
     },
     {
