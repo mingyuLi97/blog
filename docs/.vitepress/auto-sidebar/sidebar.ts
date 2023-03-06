@@ -160,6 +160,7 @@ export default {
           link: 'interview/handwriting/apply-call-bind'
         },
         { text: '数组', link: 'interview/handwriting/array' },
+        { text: '大数相加', link: 'interview/handwriting/big-add' },
         { text: '函数柯里化', link: 'interview/handwriting/currying' },
         { text: '防抖、节流', link: 'interview/handwriting/debounce-throttle' },
         { text: '深拷贝', link: 'interview/handwriting/deepClone' }

@@ -6,7 +6,7 @@
 
 ## js 调用 Native
 
-### 方式一：拦截 URL_SCHEME
+## 方式一：拦截 URL_SCHEME
 
 `URL Scheme` 是类 URL 的一种请求格式：`<protocol>://<host>/<path>?<query>#fragment`
 
@@ -24,7 +24,12 @@
 - location.href (能会引起页面的跳转丢失调用)
 - 发送 ajax 请求 (Android 没有相应的拦截方法)
 
-### 方式二：注入 API
+#### 缺点
+
+1. 浏览器的 url 有长度限制，如果信息过长会造成截断。
+2. 修改 `iframe.src` 会有一定的性能损耗，不如注入式的性能好
+
+## 方式二：注入 API
 
 这个方法会通过 webView 提供的接口，App 将 Native 的相关接口注入到 JS 的 Context（window）的对象中，一般来说这个对象内的方法名与 Native 相关方法名是相同的，Web 端就可以直接在全局 window 下使用这个暴露的全局 JS 对象，进而调用原生端的方法。
 
