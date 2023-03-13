@@ -7,7 +7,7 @@ titleTemplate: 莱米的个人博客
 hero:
   name: Blog
   text: 莱米的个人博客
-  tagline: 没啥特点仅供学习
+  tagline: 路漫漫其修远兮，吾将上下而求索
   image:
     src: /logo.jpg
   actions:

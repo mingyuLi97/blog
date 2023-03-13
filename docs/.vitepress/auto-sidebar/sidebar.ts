@@ -196,6 +196,7 @@ export default {
       text: '浏览器',
       items: [
         { text: '浏览器缓存', link: 'knowledge/browser/cache' },
+        { text: 'JS 预编译', link: 'knowledge/browser/complier' },
         { text: '跨域', link: 'knowledge/browser/cross-domain' },
         { text: '事件循环 EventLoop', link: 'knowledge/browser/event_loop' },
         { text: '浏览器多进程架构', link: 'knowledge/browser/framework' },
@@ -219,6 +220,10 @@ export default {
         { text: 'BEM', link: 'knowledge/css/bem' },
         { text: 'BFC', link: 'knowledge/css/bfc' },
         { text: '盒模型', link: 'knowledge/css/box' },
+        {
+          text: 'block、inline 和 inline-block 概念和区别',
+          link: 'knowledge/css/display'
+        },
         { text: 'flex', link: 'knowledge/css/flex' },
         { text: '移动端布局', link: 'knowledge/css/px' }
       ]
@@ -229,6 +234,7 @@ export default {
       text: 'HTML',
       items: [
         { text: '基础', link: 'knowledge/html/basic' },
+        { text: 'CSP', link: 'knowledge/html/csp' },
         { text: '搜索引擎优化（SEO）', link: 'knowledge/html/seo' }
       ]
     },
@@ -275,7 +281,10 @@ export default {
       collapsible: true,
       collapsed: false,
       text: 'TypeScript',
-      items: [{ text: '类型', link: 'knowledge/ts/index' }]
+      items: [
+        { text: 'any、never、void、unknown', link: 'knowledge/ts/any-void' },
+        { text: '类型', link: 'knowledge/ts/index' }
+      ]
     },
     {
       collapsible: true,
