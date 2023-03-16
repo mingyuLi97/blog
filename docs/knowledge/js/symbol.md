@@ -45,6 +45,11 @@ console.log(objectSymbols);
 // [Symbol(a), Symbol(b)]
 ```
 
+## 场景
+
+1. 作为属性名，避免命名冲突
+2. js 中没有私有属性、方法，可以用 `Symbol` 模拟出类似的效果。
+
 ## 简易实现
 
 <<< docs/knowledge/js/code/symbol.js
