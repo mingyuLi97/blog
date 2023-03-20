@@ -241,6 +241,50 @@ addEventListener(type, listener, useCapture);
 
 :::
 
+## e.target 和 e.currentTarget
+
+- `e.target`: 表示触发事件的元素，即事件最初发生的元素
+- `e.currentTarget`:表示绑定事件的元素，即事件处理函数所在的元素。
+
+:::details
+
+```html
+<div id="outer">
+  <div id="inner">
+    <button id="button">Click me</button>
+  </div>
+</div>
+<script>
+  var outer = document.getElementById('outer');
+  var inner = document.getElementById('inner');
+  var button = document.getElementById('button');
+
+  outer.addEventListener('click', function (e) {
+    console.log('Outer clicked');
+    console.log('e.target:', e.target);
+    console.log('e.currentTarget:', e.currentTarget);
+    console.log('\n');
+  });
+
+  inner.addEventListener('click', function (e) {
+    console.log('Inner clicked');
+    console.log('e.target:', e.target);
+    console.log('e.currentTarget:', e.currentTarget);
+    console.log('\n');
+  });
+
+  button.addEventListener('click', function (e) {
+    console.log('Button clicked');
+    console.log('e.target:', e.target);
+    console.log('e.currentTarget:', e.currentTarget);
+    console.log('\n');
+  });
+</script>
+```
+
+![](https://limy-1309594960.cos.ap-beijing.myqcloud.com/202303201907575.png)
+:::
+
 ## 事件委托
 
 事件委托利用了事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。所有用到按钮的事件（多数鼠标事件和键盘事件）都适合采用事件委托技术， 使用事件委托可以节省内存。
