@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .inline-block {
+        display: inline-block;
+      }
+      .flex {
+        display: flex;
+      }
+      .flex-column {
+        flex-direction: column;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+      .red {
+        background-color: red !important;
+      }
+
+      .pink {
+        background-color: pink;
+      }
+
+      .blue {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>上下边距合并</h2>
+      <div class="box red" style="margin-bottom: 20px">margin-bottom: 20px</div>
+      <div class="box pink" style="margin-top: 10px">margin-top: 10px</div>
+    </div>
+
+    <div class="flex flex-column">
+      <h2>flex 下上下边距不合并</h2>
+      <div class="box red" style="margin-bottom: 20px">margin-bottom: 20px</div>
+      <div class="box pink" style="margin-top: 10px">margin-top: 10px</div>
+    </div>
+
+    <div class="">
+      <h2>下上下边距不合并</h2>
+      <div class="box red" style="margin-bottom: 20px; overflow: hidden">
+        margin-bottom: 20px
+      </div>
+      <div class="box pink" style="margin-top: 10px; overflow: hidden">
+        margin-top: 10px
+      </div>
+    </div>
+
+    <div>
+      <h2>左右边距不会合并</h2>
+      <div class="box red inline-block" style="margin-right: 20px">
+        margin-right: 20px
+      </div>
+      <div class="box pink inline-block" style="margin-left: 10px">
+        margin-left: 10px
+      </div>
+    </div>
+  </body>
+</html>

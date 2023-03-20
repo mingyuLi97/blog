@@ -143,16 +143,23 @@ addEventListener(type, listener, useCapture);
 
 ## DOM 事件流
 
-1. DOM 事件流的 3 个阶段 (假定点击了盒子 c)
-   - 捕获阶段 - 向内传播
-     - a => b => c
-   - 目标阶段
-     - c
-   - 冒泡阶段 - 向外传播
-     - c => b => a
-2. 执行顺序
-   - 先捕获后冒泡
-   - 在执行目标阶段时，执行顺序按照注册顺序执行
+#### DOM 事件流的 3 个阶段 (假定点击了盒子 c)
+
+- 捕获阶段 - 向内传播
+  - a => b => c
+- 目标阶段
+  - c
+- 冒泡阶段 - 向外传播
+  - c => b => a
+
+#### 执行顺序
+
+- 先捕获后冒泡
+- 在执行目标阶段时，执行顺序按照注册顺序执行
+
+#### 为什么一般在冒泡阶段, 而不是在捕获阶段注册监听?
+
+在日常开发中，大多数情况下我们更希望事件先在目标元素上被处理完毕，再逐层向上传递，从而更好地控制事件的处理过程。而如果在捕获阶段注册事件监听函数，则可能会在目标元素上方的元素上先被触发，从而导致意料之外的结果。
 
 :::details 演示代码
 
@@ -260,6 +267,30 @@ document.querySelectorAll('li').forEach(e => {
   };
 });
 ```
+
+## handleEvent
+
+我们在监听事件时，通常是传递函数，其实也可以通过[对象](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener)的方式完成。
+
+```js
+// 定义一个事件处理对象
+const eventHandler = {
+  attr: 1,
+  // 事件处理函数
+  handleEvent(event) {
+    console.log(this.attr);
+    console.log(`Event type: ${event.type}, target: ${event.target.id}`);
+  }
+};
+
+// 为元素添加事件监听
+el.addEventListener('click', eventHandler);
+```
+
+#### 优势
+
+1. this 指向，普通函数的方式指向的是被监听的元素，handleEvent 方式指向的是传入的对象。因此能更方便的访问对象上的属性。
+2. 在更换监听事件时仅需要执行 `obj.handleEvent = newFn;`，而不用先 remove 再 add。
 
 ## 参考
 
