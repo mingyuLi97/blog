@@ -280,6 +280,7 @@ export default {
         { text: 'http 状态码', link: 'knowledge/network/http-code' },
         { text: 'HTTP', link: 'knowledge/network/http' },
         { text: 'HTTPS', link: 'knowledge/network/https' },
+        { text: 'HTTP 请求头', link: 'knowledge/network/request-header' },
         { text: '网络安全', link: 'knowledge/network/security' },
         { text: '传输协议 TCP 和 UDP', link: 'knowledge/network/tcp-udp' },
         { text: 'WebSocket', link: 'knowledge/network/websocket' }
