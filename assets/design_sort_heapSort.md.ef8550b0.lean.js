@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,a as l}from"./app.70c7d90c.js";const i=JSON.parse('{"title":"\u5806\u6392\u5E8F","description":"","frontmatter":{},"headers":[],"relativePath":"design/sort/heapSort.md"}'),p={name:"design/sort/heapSort.md"},o=l("",3),B=[o];function e(c,t,r,y,A,F){return n(),a("div",null,B)}const E=s(p,[["render",e]]);export{i as __pageData,E as default};
