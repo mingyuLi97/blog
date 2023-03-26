@@ -223,6 +223,7 @@ export default {
       collapsed: false,
       text: 'CSS',
       items: [
+        { text: '0.5px', link: 'knowledge/css/1px' },
         { text: 'BEM', link: 'knowledge/css/bem' },
         { text: 'BFC', link: 'knowledge/css/bfc' },
         { text: '盒模型', link: 'knowledge/css/box' },
