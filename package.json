@@ -12,6 +12,7 @@
     "postdeploy": "git push"
   },
   "dependencies": {
+    "@limy-org/vite-plugin-vitepress-auto-sidebar": "^1.0.0",
     "axios": "^0.27.2",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.5",
