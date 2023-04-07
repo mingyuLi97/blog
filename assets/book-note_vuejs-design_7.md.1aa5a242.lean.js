@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.f14b72c3.js";const E=JSON.parse('{"title":"第七章：渲染器的设计","description":"","frontmatter":{},"headers":[],"relativePath":"book-note/vuejs-design/7.md"}'),p={name:"book-note/vuejs-design/7.md"},o=l("",7),e=[o];function t(B,c,r,y,F,i){return n(),a("div",null,e)}const C=s(p,[["render",t]]);export{E as __pageData,C as default};

@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as l,Q as t}from"./chunks/framework.f14b72c3.js";const _=JSON.parse('{"title":"CSP","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/html/csp.md"}'),e={name:"knowledge/html/csp.md"},n=t("",11),o=[n];function p(c,r,i,d,h,u){return a(),l("div",null,o)}const m=s(e,[["render",p]]);export{_ as __pageData,m as default};

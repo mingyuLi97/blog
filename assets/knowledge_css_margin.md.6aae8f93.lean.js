@@ -1,0 +1,1 @@
+import{_ as a,o as e,c as r,Q as t}from"./chunks/framework.f14b72c3.js";const p=JSON.parse('{"title":"margin","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/css/margin.md"}'),n={name:"knowledge/css/margin.md"},i=t("",4),o=[i];function s(m,c,_,d,l,g){return e(),r("div",null,o)}const u=a(n,[["render",s]]);export{p as __pageData,u as default};

@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a,Q as c}from"./chunks/framework.f14b72c3.js";const m=JSON.parse('{"title":"watcher","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/vue/watcher.md"}'),r={name:"knowledge/vue/watcher.md"},o=c("",11),d=[o];function l(h,i,s,u,n,p){return t(),a("div",null,d)}const w=e(r,[["render",l]]);export{m as __pageData,w as default};

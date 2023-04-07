@@ -1,0 +1,1 @@
+import{_ as a,o as e,c as l,Q as o}from"./chunks/framework.f14b72c3.js";const _=JSON.parse('{"title":"yalc","description":"","frontmatter":{},"headers":[],"relativePath":"engineer/packages/yalc.md"}'),s={name:"engineer/packages/yalc.md"},c=o("",10),t=[c];function n(r,p,i,d,h,y){return e(),l("div",null,t)}const b=a(s,[["render",n]]);export{_ as __pageData,b as default};

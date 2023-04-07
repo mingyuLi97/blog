@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.f14b72c3.js";const C=JSON.parse('{"title":"数据类型检测","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/js/typeof.md"}'),o={name:"knowledge/js/typeof.md"},p=l("",24),t=[p];function e(c,B,r,y,i,F){return n(),a("div",null,t)}const u=s(o,[["render",e]]);export{C as __pageData,u as default};

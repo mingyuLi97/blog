@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as o}from"./chunks/framework.f14b72c3.js";const F=JSON.parse('{"title":"箭头函数","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/js/arrow_function.md"}'),l={name:"knowledge/js/arrow_function.md"},e=o("",13),t=[e];function p(r,c,i,B,y,d){return a(),n("div",null,t)}const u=s(l,[["render",p]]);export{F as __pageData,u as default};

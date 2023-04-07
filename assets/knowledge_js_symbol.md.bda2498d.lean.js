@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.f14b72c3.js";const C=JSON.parse('{"title":"Symbol","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/js/symbol.md"}'),o={name:"knowledge/js/symbol.md"},p=l("",14),e=[p];function B(t,c,r,y,F,A){return n(),a("div",null,e)}const E=s(o,[["render",B]]);export{C as __pageData,E as default};

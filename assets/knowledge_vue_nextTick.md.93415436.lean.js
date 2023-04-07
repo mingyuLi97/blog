@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.f14b72c3.js";const C=JSON.parse('{"title":"nextTick","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/vue/nextTick.md"}'),p={name:"knowledge/vue/nextTick.md"},o=l("",4),e=[o];function c(B,t,r,y,A,F){return n(),a("div",null,e)}const d=s(p,[["render",c]]);export{C as __pageData,d as default};

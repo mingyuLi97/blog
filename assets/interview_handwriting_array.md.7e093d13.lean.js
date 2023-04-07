@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.f14b72c3.js";const d=JSON.parse('{"title":"数组","description":"","frontmatter":{},"headers":[],"relativePath":"interview/handwriting/array.md"}'),o={name:"interview/handwriting/array.md"},p=l("",6),e=[p];function t(r,B,c,y,i,A){return a(),n("div",null,e)}const C=s(o,[["render",t]]);export{d as __pageData,C as default};
