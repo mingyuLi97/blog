@@ -1,0 +1,1 @@
+import{_ as a,o as e,c as i,Q as t}from"./chunks/framework.f14b72c3.js";const m=JSON.parse('{"title":"Hybrid","description":"","frontmatter":{},"headers":[],"relativePath":"engineer/hybrid/index.md"}'),r={name:"engineer/hybrid/index.md"},l=t("",29),o=[l];function d(h,n,s,c,b,p){return e(),i("div",null,o)}const _=a(r,[["render",d]]);export{m as __pageData,_ as default};
