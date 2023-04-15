@@ -26,6 +26,8 @@
   - 客户端收到请求，向服务器发送确认 **ack = y + 1**, 服务端和客户端同时进入**ESTABLISHED**状态，完成连接
   - 白话版 - 我还在，咱们建立连接吧
 
+[握手失败](https://www.jianshu.com/p/e4cd3de320f7)
+
 #### 四次挥手
 
 ![](https://img-blog.csdnimg.cn/20200624102940599.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTE1NDQ3OTg5Ng==,size_16,color_FFFFFF,t_70#pic_center#crop=0&crop=0&crop=1&crop=1&id=CHaOf&originHeight=463&originWidth=668&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
