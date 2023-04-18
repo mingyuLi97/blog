@@ -1,1 +1,0 @@
-import{_ as e,o as a,c as o,Q as r}from"./chunks/framework.f14b72c3.js";const m=JSON.parse('{"title":"浏览器缓存","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/browser/cache.md"}'),i={name:"knowledge/browser/cache.md"},t=r("",36),c=[t];function l(d,h,s,n,p,f){return a(),o("div",null,c)}const b=e(i,[["render",l]]);export{m as __pageData,b as default};

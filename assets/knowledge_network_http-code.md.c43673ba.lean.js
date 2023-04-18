@@ -1,1 +1,0 @@
-import{_ as e,o,c as a,Q as t}from"./chunks/framework.f14b72c3.js";const x=JSON.parse('{"title":"http 状态码","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/network/http-code.md"}'),l={name:"knowledge/network/http-code.md"},i=t("",14),d=[i];function r(c,n,p,h,s,u){return o(),a("div",null,d)}const P=e(l,[["render",r]]);export{x as __pageData,P as default};

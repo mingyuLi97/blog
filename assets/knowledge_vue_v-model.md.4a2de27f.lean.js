@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as l,R as n}from"./chunks/framework.35669211.js";const A=JSON.parse('{"title":"v-model","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/vue/v-model.md"}'),o={name:"knowledge/vue/v-model.md"},p=n("",13),e=[p];function t(c,r,B,y,i,d){return a(),l("div",null,e)}const m=s(o,[["render",t]]);export{A as __pageData,m as default};

@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.f14b72c3.js";const d=JSON.parse('{"title":"ES6 Generator","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/js/generator.md"}'),o={name:"knowledge/js/generator.md"},p=l("",33),e=[p];function B(c,t,r,y,F,A){return n(),a("div",null,e)}const C=s(o,[["render",B]]);export{d as __pageData,C as default};

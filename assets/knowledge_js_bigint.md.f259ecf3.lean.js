@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.f14b72c3.js";const D=JSON.parse('{"title":"大数","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/js/bigint.md"}'),o={name:"knowledge/js/bigint.md"},p=l("",10),t=[p];function e(c,r,B,y,i,A){return n(),a("div",null,t)}const E=s(o,[["render",e]]);export{D as __pageData,E as default};

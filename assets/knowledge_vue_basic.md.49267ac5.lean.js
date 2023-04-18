@@ -1,1 +1,0 @@
-import{_ as e,o as a,c as i,Q as o}from"./chunks/framework.f14b72c3.js";const f=JSON.parse('{"title":"概念","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/vue/basic.md"}'),t={name:"knowledge/vue/basic.md"},r=o("",37),l=[r];function n(d,u,h,s,c,p){return a(),i("div",null,l)}const b=e(t,[["render",n]]);export{f as __pageData,b as default};

@@ -1,0 +1,1 @@
+import{_ as a,o as s,c as l,R as o}from"./chunks/framework.35669211.js";const h=JSON.parse('{"title":"jsbridge","description":"","frontmatter":{},"headers":[],"relativePath":"engineer/hybrid/jsb.md"}'),e={name:"engineer/hybrid/jsb.md"},n=o("",32),p=[n];function t(c,r,i,B,d,y){return s(),l("div",null,p)}const b=a(e,[["render",t]]);export{h as __pageData,b as default};

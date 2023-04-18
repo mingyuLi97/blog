@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a,R as r}from"./chunks/framework.35669211.js";const b=JSON.parse('{"title":"Esbuild","description":"","frontmatter":{},"headers":[],"relativePath":"engineer/packages/esbuild.md"}'),s={name:"engineer/packages/esbuild.md"},i=r("",5),l=[i];function o(n,d,c,u,_,h){return t(),a("div",null,l)}const g=e(s,[["render",o]]);export{b as __pageData,g as default};

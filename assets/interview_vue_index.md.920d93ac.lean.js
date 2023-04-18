@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as t,R as i}from"./chunks/framework.35669211.js";const m=JSON.parse('{"title":"vue 相关面试题","description":"","frontmatter":{},"headers":[],"relativePath":"interview/vue/index.md"}'),r={name:"interview/vue/index.md"},n=i("",6),o=[n];function _(c,h,d,s,l,u){return a(),t("div",null,o)}const f=e(r,[["render",_]]);export{m as __pageData,f as default};

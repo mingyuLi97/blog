@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.f14b72c3.js";const C=JSON.parse('{"title":"vuex","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/vue/vuex.md"}'),p={name:"knowledge/vue/vuex.md"},o=l("",16),t=[o];function B(e,c,r,y,F,i){return n(),a("div",null,t)}const E=s(p,[["render",B]]);export{C as __pageData,E as default};

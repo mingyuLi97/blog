@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.f14b72c3.js";const C=JSON.parse('{"title":"addEventListener","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/js/event.md"}'),p={name:"knowledge/js/event.md"},o=l("",27),B=[o];function e(t,c,r,y,A,F){return n(),a("div",null,B)}const E=s(p,[["render",e]]);export{C as __pageData,E as default};

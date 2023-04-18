@@ -1,1 +1,0 @@
-import{_ as e,o as a,c as r,Q as t}from"./chunks/framework.f14b72c3.js";const g=JSON.parse('{"title":"配置","description":"","frontmatter":{},"headers":[],"relativePath":"engineer/webpack/index.md"}'),i={name:"engineer/webpack/index.md"},l=t("",24),n=[l];function s(p,o,c,h,u,d){return a(),r("div",null,n)}const k=e(i,[["render",s]]);export{g as __pageData,k as default};

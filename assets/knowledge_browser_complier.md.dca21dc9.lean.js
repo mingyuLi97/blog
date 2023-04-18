@@ -1,1 +1,0 @@
-import{_ as a,o as l,c as e,Q as o}from"./chunks/framework.f14b72c3.js";const b=JSON.parse('{"title":"JS 预编译","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/browser/complier.md"}'),i={name:"knowledge/browser/complier.md"},t=o("",10),s=[t];function n(r,c,p,d,h,_){return l(),e("div",null,s)}const m=a(i,[["render",n]]);export{b as __pageData,m as default};

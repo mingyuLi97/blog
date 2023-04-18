@@ -1,1 +1,0 @@
-import{_ as l,o,c as e,Q as a}from"./chunks/framework.f14b72c3.js";const b=JSON.parse('{"title":"rollup","description":"","frontmatter":{},"headers":[],"relativePath":"engineer/rollup/index.md"}'),r={name:"engineer/rollup/index.md"},i=a("",42),p=[i];function u(n,t,s,c,d,h){return o(),e("div",null,p)}const m=l(r,[["render",u]]);export{b as __pageData,m as default};
