@@ -17,7 +17,7 @@
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.5",
     "markdown-it-custom-attrs": "^1.0.2",
-    "vitepress": "^1.0.0-alpha.65",
+    "vitepress": "^1.0.0-alpha.69",
     "vue": "^3.2.37"
   },
   "devDependencies": {

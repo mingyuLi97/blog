@@ -178,3 +178,10 @@ Main.js
 import { foo, bar, arr } from './module1';
 import myFun from './module3';
 ```
+
+## ESM vs CommonJs
+
+1. CommonJS 是同步加载模块，ES6 是异步加载模块
+2. CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。
+   - CJS：一旦输出一个值，模块内部的变化就影响不到这个值
+   - ESM：JS 引擎对脚本静态分析的时候，遇到模块加载命令 import，就会生成一个只读引用。等到脚本真正执行时，再根据这个只读引用，到被加载的那个模块里面去取值。
