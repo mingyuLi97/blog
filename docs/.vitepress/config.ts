@@ -9,6 +9,7 @@ const config = defineConfig({
   markdown: getMarkDownConfig(),
   base: '/blog/',
   title: '莱米',
+  lang: 'zh-CN',
   description: '莱米的个人博客',
   themeConfig: {
     siteTitle: 'limy-blog',
