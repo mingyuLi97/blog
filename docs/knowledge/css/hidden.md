@@ -10,6 +10,19 @@
 `visibility : hidden` 不会覆盖子元素 `visibility : visible`
 :::
 
+## 对后代 img 的影响
+
+设置了 `display: none` 的元素，其背景和后代 img 元素都会产生请求，后代元素的**背景不会产生请求**，这些图片都不会被渲染。
+
+```html
+<!-- 1、3 发起请求 2 不请求 -->
+<div style="display: none;background-image: url(1.png)">
+  <div style="background-image: url(2.png)">
+    <img src="3.png" />
+  </div>
+</div>
+```
+
 ## 合成层
 
 页面的绘制并不一定为在内存中的单层画面绘制，有时浏览器会将一帧画面绘制为多层画面，然后将若干层画面合并成一张图片显示到屏幕上。
