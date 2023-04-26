@@ -27,6 +27,31 @@ obj.toString;
 // ƒ toString() { [native code] }
 ```
 
+## 练习
+
+```js
+function Fn() {}
+
+const fn = new Fn();
+console.log('fn.prototype', fn.prototype);
+console.log('fn.__proto__', fn.__proto__);
+console.log('fn.__proto__ === Fn.prototype', fn.__proto__ === Fn.prototype);
+
+console.log('Fn.__proto__', Fn.__proto__);
+console.log('fn.__proto__ === Fn.prototype', fn.__proto__ === Fn.prototype);
+console.log('Fn.prototype', Fn.prototype);
+console.log('Fn.prototype.__proto__', Fn.prototype.__proto__);
+console.log(
+  'Fn.prototype.__proto__ === Object.prototype',
+  Fn.prototype.__proto__ === Object.prototype
+);
+
+console.log('fn.constructor === Fn', fn.constructor === Fn);
+console.log('Fn.constructor', Fn.constructor);
+```
+
+![](https://limy-1309594960.cos.ap-beijing.myqcloud.com/202304242313107.png)
+
 ## 参考
 
 - [掘金：面不面试的，你都得懂原型和原型链](https://juejin.cn/post/6934498361475072014)
