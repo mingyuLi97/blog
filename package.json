@@ -12,7 +12,6 @@
     "postdeploy": "git push"
   },
   "dependencies": {
-    "@limy-org/vite-plugin-vitepress-auto-sidebar": "^1.0.0",
     "axios": "^0.27.2",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.5",
@@ -22,6 +21,7 @@
   },
   "devDependencies": {
     "@algolia/client-search": "^4.17.0",
+    "@iminu/vitepress-plugin-auto-sidebar": "^1.0.3",
     "@limy-org/prettier-config": "^1.0.0",
     "@types/glob": "^8.0.1",
     "@types/markdown-it": "^12.2.3",

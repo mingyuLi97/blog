@@ -1,6 +1,6 @@
 import path from 'path';
 const COMPONENTS_DIR = path.resolve(process.cwd(), 'components');
-import VitePluginAutoSidebar from '@limy-org/vite-plugin-vitepress-auto-sidebar';
+import VitePluginAutoSidebar from '@iminu/vitepress-plugin-auto-sidebar';
 import { DefaultTheme, UserConfig } from 'vitepress';
 import { chineseToNumber } from './utils';
 
@@ -17,9 +17,10 @@ export function getViteConfig() {
     },
     plugins: [
       VitePluginAutoSidebar({
-        root: path.resolve(process.cwd(), 'docs'),
-        ignores: [''],
+        // docs: path.resolve(process.cwd(), 'docs'),
+        // ignores: ['index.md'],
         sidebarResolved(sidebar) {
+          // console.log(sidebar);
           const map: Record<
             string,
             { text: string; sort?: (a: string, b: string) => number } | string
