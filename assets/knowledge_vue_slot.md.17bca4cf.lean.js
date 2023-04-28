@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,R as l}from"./chunks/framework.35669211.js";const d=JSON.parse('{"title":"Slot","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/vue/slot.md"}'),p={name:"knowledge/vue/slot.md"},o=l("",17),e=[o];function t(c,B,r,y,i,F){return n(),a("div",null,e)}const C=s(p,[["render",t]]);export{d as __pageData,C as default};

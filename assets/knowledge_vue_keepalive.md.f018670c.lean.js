@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as l,R as n}from"./chunks/framework.35669211.js";const u=JSON.parse('{"title":"keep-alive","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/vue/keepalive.md"}'),e={name:"knowledge/vue/keepalive.md"},o=n("",11),p=[o];function t(c,r,B,i,y,d){return a(),l("div",null,p)}const F=s(e,[["render",t]]);export{u as __pageData,F as default};

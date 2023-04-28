@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,R as l}from"./chunks/framework.35669211.js";const A=JSON.parse('{"title":"如何写一个 Vue 组件","description":"","frontmatter":{},"headers":[],"relativePath":"design/experience/comp.md"}'),p={name:"design/experience/comp.md"},o=l("",58),e=[o];function t(c,r,B,i,y,d){return a(),n("div",null,e)}const F=s(p,[["render",t]]);export{A as __pageData,F as default};

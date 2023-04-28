@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,R as l}from"./chunks/framework.d45ee533.js";const C=JSON.parse('{"title":"第八章：挂载与更新","description":"","frontmatter":{},"headers":[],"relativePath":"book-note/vuejs-design/8.md"}'),p={name:"book-note/vuejs-design/8.md"},o=l("",50),B=[o];function e(t,c,r,y,F,A){return n(),a("div",null,B)}const E=s(p,[["render",e]]);export{C as __pageData,E as default};

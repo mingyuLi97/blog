@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,R as l}from"./chunks/framework.d45ee533.js";const A=JSON.parse('{"title":"第三章：设计思路","description":"","frontmatter":{},"headers":[],"relativePath":"book-note/vuejs-design/3.md"}'),o={name:"book-note/vuejs-design/3.md"},p=l("",18),e=[p];function t(r,c,B,i,y,d){return a(),n("div",null,e)}const h=s(o,[["render",t]]);export{A as __pageData,h as default};

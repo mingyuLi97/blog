@@ -1,1 +1,0 @@
-import{_ as a,o as e,c as l,R as s}from"./chunks/framework.35669211.js";const y=JSON.parse('{"title":"前端页面优化","description":"","frontmatter":{},"headers":[],"relativePath":"interview/other/optimize.md"}'),n={name:"interview/other/optimize.md"},o=s("",31),r=[o];function t(i,p,c,d,h,B){return e(),l("div",null,r)}const b=a(n,[["render",t]]);export{y as __pageData,b as default};

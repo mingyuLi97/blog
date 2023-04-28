@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,R as l}from"./chunks/framework.35669211.js";const i=JSON.parse('{"title":"冒泡排序","description":"","frontmatter":{},"headers":[],"relativePath":"design/sort/bubbleSort.md"}'),o={name:"design/sort/bubbleSort.md"},p=l("",4),B=[p];function e(t,r,c,y,A,F){return a(),n("div",null,B)}const E=s(o,[["render",e]]);export{i as __pageData,E as default};

@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,R as l}from"./chunks/framework.d45ee533.js";const m=JSON.parse('{"title":"移动端布局","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/css/px.md"}'),o={name:"knowledge/css/px.md"},p=l("",26),e=[p];function t(r,c,B,i,y,d){return a(),n("div",null,e)}const A=s(o,[["render",t]]);export{m as __pageData,A as default};

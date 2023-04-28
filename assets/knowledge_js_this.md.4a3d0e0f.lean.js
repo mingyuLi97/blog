@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as i,R as s}from"./chunks/framework.d45ee533.js";const f=JSON.parse('{"title":"JS 中 this 的五种情况","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/js/this.md"}'),o={name:"knowledge/js/this.md"},a=s("",2),l=[a];function _(c,h,n,r,d,p){return e(),i("div",null,l)}const S=t(o,[["render",_]]);export{f as __pageData,S as default};

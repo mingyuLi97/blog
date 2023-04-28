@@ -1,0 +1,1 @@
+import{o as s,c as n,R as a}from"./chunks/framework.d45ee533.js";const l=a("",21),o=[l],B=JSON.parse('{"title":"Proxy、Reflect","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/js/proxy.md"}'),p={name:"knowledge/js/proxy.md"},y=Object.assign(p,{setup(e){return(t,r)=>(s(),n("div",null,o))}});export{B as __pageData,y as default};
