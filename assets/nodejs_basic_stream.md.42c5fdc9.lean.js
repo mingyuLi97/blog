@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,R as l}from"./chunks/framework.d45ee533.js";const d=JSON.parse('{"title":"Stream","description":"","frontmatter":{},"headers":[],"relativePath":"nodejs/basic/stream.md"}'),p={name:"nodejs/basic/stream.md"},o=l("",11),e=[o];function t(r,c,B,y,i,F){return a(),n("div",null,e)}const C=s(p,[["render",t]]);export{d as __pageData,C as default};
