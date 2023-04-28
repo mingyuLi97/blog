@@ -17,7 +17,19 @@ const config = defineConfig({
     nav: [
       { text: '基础知识', link: '/knowledge/html/basic' },
       { text: '编程思想', link: '/design/design-pattern/observer' },
-      { text: '工程化', link: '/engineer/packages/yalc' },
+      {
+        text: 'Node.js',
+        items: [
+          {
+            text: '工程化',
+            link: '/engineer/packages/yalc'
+          },
+          {
+            text: '基础',
+            link: '/nodejs/basic/stream.md'
+          }
+        ]
+      },
       { text: '读书笔记', link: '/book-note/vuejs-design/1' },
       {
         text: '手写题',
