@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,R as l}from"./chunks/framework.d45ee533.js";const i=JSON.parse('{"title":"选择排序","description":"","frontmatter":{},"headers":[],"relativePath":"design/sort/selectionSort.md"}'),o={name:"design/sort/selectionSort.md"},p=l("",3),B=[p];function e(t,r,c,y,A,F){return n(),a("div",null,B)}const E=s(o,[["render",e]]);export{i as __pageData,E as default};
