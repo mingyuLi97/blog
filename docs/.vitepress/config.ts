@@ -1,10 +1,8 @@
-import { defineConfig, DefaultTheme } from 'vitepress';
-import { withImgPreview } from './img-overlay';
-import anchor from 'markdown-it-anchor';
+import { defineConfig } from 'vitepress';
 import { getViteConfig } from './vite-config';
 import { getMarkDownConfig } from './markdown-config';
 
-const config = defineConfig({
+export default defineConfig({
   vite: getViteConfig(),
   markdown: getMarkDownConfig(),
   base: '/blog/',
@@ -51,5 +49,3 @@ const config = defineConfig({
     }
   }
 });
-
-export default withImgPreview(config);
