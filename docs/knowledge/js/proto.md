@@ -7,6 +7,8 @@
 
 ## 特性
 
+![](https://limy-1309594960.cos.ap-beijing.myqcloud.com/202305231454088.png)
+
 1. 对象 `__proto__` 的值等于其构造函数的 `prototype`
 
 ```js
@@ -38,7 +40,6 @@ console.log('fn.__proto__', fn.__proto__);
 console.log('fn.__proto__ === Fn.prototype', fn.__proto__ === Fn.prototype);
 
 console.log('Fn.__proto__', Fn.__proto__);
-console.log('fn.__proto__ === Fn.prototype', fn.__proto__ === Fn.prototype);
 console.log('Fn.prototype', Fn.prototype);
 console.log('Fn.prototype.__proto__', Fn.prototype.__proto__);
 console.log(

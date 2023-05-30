@@ -18,6 +18,7 @@
     "proto",
     "QUIC",
     "referer",
+    "tinyint",
     "tqdm",
     "typeof",
     "vcodec",

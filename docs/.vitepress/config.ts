@@ -15,6 +15,7 @@ export default defineConfig({
     nav: [
       { text: '基础知识', link: '/knowledge/html/basic' },
       { text: '编程思想', link: '/design/design-pattern/observer' },
+      { text: '后端', link: '/backend/mysql/database' },
       {
         text: 'Node.js',
         items: [
