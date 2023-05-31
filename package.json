@@ -8,8 +8,8 @@
     "dev": "vitepress dev docs --host",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
-    "deploy": "git add . && git-cz",
-    "postdeploy": "git push"
+    "cmt": "git add . && git-cz",
+    "postcmt": "git push"
   },
   "dependencies": {
     "axios": "^0.27.2",
