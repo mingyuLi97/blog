@@ -1,6 +1,4 @@
-# 选择语句
-
-## SELECT
+# SELECT - 查
 
 ```sql
 SELECT * FROM customers;
