@@ -1,4 +1,4 @@
-# 增加
+# INSERT - 增
 
 ## 普通插入
 
@@ -35,4 +35,15 @@ INSERT INTO order_items
 VALUES
 	(last_insert_id(), 1, 1, 2.95),
     (last_insert_id(), 2, 1, 3.95)
+```
+
+## 子查询插入
+
+借助子查询，将 orders 表中符合的数据全部插入到 orders_archived
+
+```sql
+INSERT INTO orders_archived
+SELECT *
+FROM orders
+WHERE order_date > '2019-01-01'
 ```

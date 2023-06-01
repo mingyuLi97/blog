@@ -1,14 +1,21 @@
-# table
+# 表操作
 
 ## 创建
 
-```sh
+```sql
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(50) NOT NULL,
   password VARCHAR(100) NOT NULL,
   created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+```
+
+```sql
+-- 将 orders 表中所有的数据复制到新创建的表
+CREATE TABLE orders_archived
+AS
+SELECT * FROM orders;
 ```
 
 ## 约束
