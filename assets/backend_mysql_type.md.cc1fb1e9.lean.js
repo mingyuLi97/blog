@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as l,R as a}from"./chunks/framework.d45ee533.js";const b=JSON.parse('{"title":"数据类型","description":"","frontmatter":{},"headers":[],"relativePath":"backend/mysql/type.md"}'),d={name:"backend/mysql/type.md"},n=a("",18),r=[n];function i(s,h,o,c,y,x){return e(),l("div",null,r)}const f=t(d,[["render",i]]);export{b as __pageData,f as default};
