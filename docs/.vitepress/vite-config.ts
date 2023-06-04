@@ -55,7 +55,8 @@ export function getViteConfig() {
             'knowledge/js': { text: 'JavaScript' },
             'knowledge/ts': { text: 'TypeScript' },
             'knowledge/vue': { text: 'Vue' },
-            'knowledge/network': { text: '计算机网络' }
+            'network/basic': { text: '基础知识' },
+            'network/security': { text: '网络安全' }
           };
 
           for (const key of Object.keys(map)) {

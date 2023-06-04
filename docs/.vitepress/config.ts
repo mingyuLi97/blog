@@ -17,6 +17,10 @@ export default defineConfig({
       { text: '编程思想', link: '/design/design-pattern/observer' },
       { text: '后端', link: '/backend/mysql/database' },
       {
+        text: '计算机网络',
+        link: '/network/basic/http'
+      },
+      {
         text: 'Node.js',
         items: [
           {
