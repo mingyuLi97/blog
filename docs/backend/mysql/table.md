@@ -20,12 +20,11 @@ SELECT * FROM orders;
 
 ## 约束
 
-```sh
-# 为 username 增加唯一性约束
+```sql
+-- 为 username 增加唯一性约束
 ALTER TABLE users ADD UNIQUE (username);
-
-# 如果重复插入返回下面错误
-ERROR 1062 (23000): Duplicate entry 'limy' for key 'users.username'
+-- 如果重复插入返回下面错误
+-- ERROR 1062 (23000): Duplicate entry 'limy' for key 'users.username'
 ```
 
 ## 插入数据
@@ -36,4 +35,12 @@ INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, 
 
 # 示例
 INSERT INTO users (username, password) VALUES ('limy', '123456');
+```
+
+## 增加新字段
+
+语法：`ALTER TABLE table_name ADD COLUMN new_column_name data_type constraints;`
+
+```sql
+ALTER TABLE customers ADD COLUMN delete_at Date NULL DEFAULT NULL
 ```
