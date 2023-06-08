@@ -34,7 +34,7 @@ HTTP1.0 需要使用 `Connection: keep-alive` 参数来告诉服务器需要建�
 4. **改进缓存机制**
 
 在 HTTP1.0 中主要使用 header 里的 `If-Modified-Since`（比较资源最后的更新时间是否一致）,`Expires`（资源的过期时间（取决于客户端本地时间）） 来做为缓存判断的标准。
-HTTP1.1 则引入了更多的 [缓存控制](../browser/cache.md) 策略：
+HTTP1.1 则引入了更多的 [缓存控制](/knowledge/browser/cache.md) 策略：
 
 - `Entity tag`：资源的匹配信息
 - `If-Unmodified-Since`：比较资源最后的更新时间是否不一致

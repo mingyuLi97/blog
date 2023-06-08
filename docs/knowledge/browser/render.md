@@ -2,11 +2,11 @@
 
 ## 浏览器中输入 `URL` 到页面返回的全过程 <br/>
 
-1. [DNS 域名解析](/knowledge/network/dns.md#解析过程)
-2. 拿到解析的 IP 地址，建立 [TCP](/knowledge/network/tcp-udp.html#tcp) 连接
-3. 向 IP 地址发送 [HTTP](/knowledge/network/http.html) 请求
+1. [DNS 域名解析](/network/basic/dns.md#解析过程)
+2. 拿到解析的 IP 地址，建立 [TCP](/network/basic/tcp-udp.html#tcp) 连接
+3. 向 IP 地址发送 [HTTP](/network/basic/http.html) 请求
 4. 服务器处理请求
-5. [返回响应结果](../network/http-code.md)
+5. [返回响应结果](/network/basic/http-code.md)
 6. 关闭 TCP 连接
 7. [浏览器解析 HTML](#浏览器解析-html)
 8. 浏览器布局渲染

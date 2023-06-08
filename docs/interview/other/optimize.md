@@ -55,7 +55,7 @@ body > main.container > aside.aside div:nth-of-type(odd) {
 ## 网络层
 
 - 多个小文件合并成一个
-- 使用 [HTTP2](../../knowledge/network/http.md#http2-的改进)
+- 使用 [HTTP2](../../network/basic/http.md#http2-的改进)
 - 静态资源使用 CDN, 能够分担主服务器的压力，并且能够找到延时、负载相对最优的服务器，提升速度。
 - 合理使用[浏览器缓存](../../knowledge/browser/cache.md)
 

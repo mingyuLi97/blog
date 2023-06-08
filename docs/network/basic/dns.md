@@ -57,7 +57,7 @@ HTTP /1.1 中每个域只有一定数量的并发限制，如果过多请求，�
 因此 HTTP /1.1 时：一个网站里面使用至少 2 个域，但不多于 4 个域
 :::
 
-#### 2. [DNS 预解析](./../browser/preload.md#dns-prefetch)
+#### 2. [DNS 预解析](/knowledge/browser/preload.md#dns-prefetch)
 
 提前解析出页面中要使用的域名，以减少后续的 DNS 解析时间
 
