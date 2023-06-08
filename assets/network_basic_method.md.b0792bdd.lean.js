@@ -1,0 +1,1 @@
+import{_ as t,o as a,c as e,R as o}from"./chunks/framework.d45ee533.js";const P=JSON.parse('{"title":"HTTP 请求方法","description":"","frontmatter":{},"headers":[],"relativePath":"network/basic/method.md"}'),r={name:"network/basic/method.md"},h=o("",12),n=[h];function s(i,c,l,p,d,T){return a(),e("div",null,n)}const u=t(r,[["render",s]]);export{P as __pageData,u as default};

@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,R as l}from"./chunks/framework.d45ee533.js";const F=JSON.parse('{"title":"useEffect","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/react/useEffect.md"}'),o={name:"knowledge/react/useEffect.md"},e=l("",14),p=[e];function t(c,r,B,y,i,d){return a(),n("div",null,p)}const h=s(o,[["render",t]]);export{F as __pageData,h as default};

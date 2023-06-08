@@ -1,0 +1,37 @@
+import{_ as s,o as n,c as a,R as l}from"./chunks/framework.d45ee533.js";const C=JSON.parse('{"title":"useContext","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/react/useContext.md"}'),p={name:"knowledge/react/useContext.md"},o=l(`<h1 id="usecontext" tabindex="-1">useContext <a class="header-anchor" href="#usecontext" aria-label="Permalink to &quot;useContext&quot;">​</a></h1><p>用于父组件向子孙组件传递值，类似 Vue 中的 <code>provide、inject</code></p><div class="language-jsx"><button title="Copy Code" class="copy"></button><span class="lang">jsx</span><pre class="shiki one-dark-pro"><code><span class="line"><span style="color:#C678DD;">const</span><span style="color:#ABB2BF;"> </span><span style="color:#E5C07B;">themes</span><span style="color:#ABB2BF;"> </span><span style="color:#56B6C2;">=</span><span style="color:#ABB2BF;"> {</span></span>
+<span class="line"><span style="color:#ABB2BF;">  </span><span style="color:#E06C75;">light</span><span style="color:#ABB2BF;">: {</span></span>
+<span class="line"><span style="color:#ABB2BF;">    </span><span style="color:#E06C75;">foreground</span><span style="color:#ABB2BF;">: </span><span style="color:#98C379;">&#39;#000000&#39;</span><span style="color:#ABB2BF;">,</span></span>
+<span class="line"><span style="color:#ABB2BF;">    </span><span style="color:#E06C75;">background</span><span style="color:#ABB2BF;">: </span><span style="color:#98C379;">&#39;#eeeeee&#39;</span></span>
+<span class="line"><span style="color:#ABB2BF;">  },</span></span>
+<span class="line"><span style="color:#ABB2BF;">  </span><span style="color:#E06C75;">dark</span><span style="color:#ABB2BF;">: {</span></span>
+<span class="line"><span style="color:#ABB2BF;">    </span><span style="color:#E06C75;">foreground</span><span style="color:#ABB2BF;">: </span><span style="color:#98C379;">&#39;#ffffff&#39;</span><span style="color:#ABB2BF;">,</span></span>
+<span class="line"><span style="color:#ABB2BF;">    </span><span style="color:#E06C75;">background</span><span style="color:#ABB2BF;">: </span><span style="color:#98C379;">&#39;#222222&#39;</span></span>
+<span class="line"><span style="color:#ABB2BF;">  }</span></span>
+<span class="line"><span style="color:#ABB2BF;">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C678DD;">const</span><span style="color:#ABB2BF;"> </span><span style="color:#E5C07B;">ThemeContext</span><span style="color:#ABB2BF;"> </span><span style="color:#56B6C2;">=</span><span style="color:#ABB2BF;"> </span><span style="color:#E5C07B;">React</span><span style="color:#ABB2BF;">.</span><span style="color:#61AFEF;">createContext</span><span style="color:#ABB2BF;">(</span><span style="color:#E5C07B;">themes</span><span style="color:#ABB2BF;">.</span><span style="color:#E06C75;">light</span><span style="color:#ABB2BF;">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C678DD;">function</span><span style="color:#ABB2BF;"> </span><span style="color:#61AFEF;">App</span><span style="color:#ABB2BF;">() {</span></span>
+<span class="line"><span style="color:#ABB2BF;">  </span><span style="color:#C678DD;">return</span><span style="color:#ABB2BF;"> (</span></span>
+<span class="line"><span style="color:#ABB2BF;">    &lt;</span><span style="color:#E5C07B;">ThemeContext.Provider</span><span style="color:#ABB2BF;"> </span><span style="color:#D19A66;font-style:italic;">value</span><span style="color:#56B6C2;">=</span><span style="color:#C678DD;">{</span><span style="color:#E5C07B;">themes</span><span style="color:#ABB2BF;">.</span><span style="color:#E06C75;">dark</span><span style="color:#C678DD;">}</span><span style="color:#ABB2BF;">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF;">      &lt;</span><span style="color:#E5C07B;">Toolbar</span><span style="color:#ABB2BF;"> /&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF;">    &lt;/</span><span style="color:#E5C07B;">ThemeContext.Provider</span><span style="color:#ABB2BF;">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF;">  );</span></span>
+<span class="line"><span style="color:#ABB2BF;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C678DD;">function</span><span style="color:#ABB2BF;"> </span><span style="color:#61AFEF;">Toolbar</span><span style="color:#ABB2BF;">(</span><span style="color:#E06C75;font-style:italic;">props</span><span style="color:#ABB2BF;">) {</span></span>
+<span class="line"><span style="color:#ABB2BF;">  </span><span style="color:#C678DD;">return</span><span style="color:#ABB2BF;"> (</span></span>
+<span class="line"><span style="color:#ABB2BF;">    &lt;</span><span style="color:#E06C75;">div</span><span style="color:#ABB2BF;">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF;">      &lt;</span><span style="color:#E5C07B;">ThemedButton</span><span style="color:#ABB2BF;"> /&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF;">    &lt;/</span><span style="color:#E06C75;">div</span><span style="color:#ABB2BF;">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF;">  );</span></span>
+<span class="line"><span style="color:#ABB2BF;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C678DD;">function</span><span style="color:#ABB2BF;"> </span><span style="color:#61AFEF;">ThemedButton</span><span style="color:#ABB2BF;">() {</span></span>
+<span class="line"><span style="color:#ABB2BF;">  </span><span style="color:#C678DD;">const</span><span style="color:#ABB2BF;"> </span><span style="color:#E5C07B;">theme</span><span style="color:#ABB2BF;"> </span><span style="color:#56B6C2;">=</span><span style="color:#ABB2BF;"> </span><span style="color:#61AFEF;">useContext</span><span style="color:#ABB2BF;">(</span><span style="color:#E06C75;">ThemeContext</span><span style="color:#ABB2BF;">);</span></span>
+<span class="line"><span style="color:#ABB2BF;">  </span><span style="color:#C678DD;">return</span><span style="color:#ABB2BF;"> (</span></span>
+<span class="line"><span style="color:#ABB2BF;">    &lt;</span><span style="color:#E06C75;">button</span><span style="color:#ABB2BF;"> </span><span style="color:#D19A66;font-style:italic;">style</span><span style="color:#56B6C2;">=</span><span style="color:#C678DD;">{</span><span style="color:#ABB2BF;">{ </span><span style="color:#E06C75;">background</span><span style="color:#ABB2BF;">: </span><span style="color:#E5C07B;">theme</span><span style="color:#ABB2BF;">.</span><span style="color:#E06C75;">background</span><span style="color:#ABB2BF;">, </span><span style="color:#E06C75;">color</span><span style="color:#ABB2BF;">: </span><span style="color:#E5C07B;">theme</span><span style="color:#ABB2BF;">.</span><span style="color:#E06C75;">foreground</span><span style="color:#ABB2BF;"> }</span><span style="color:#C678DD;">}</span><span style="color:#ABB2BF;">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF;">      I am styled by theme context!</span></span>
+<span class="line"><span style="color:#ABB2BF;">    &lt;/</span><span style="color:#E06C75;">button</span><span style="color:#ABB2BF;">&gt;</span></span>
+<span class="line"><span style="color:#ABB2BF;">  );</span></span>
+<span class="line"><span style="color:#ABB2BF;">}</span></span></code></pre></div>`,3),e=[o];function t(B,c,r,y,A,F){return n(),a("div",null,e)}const d=s(p,[["render",t]]);export{C as __pageData,d as default};

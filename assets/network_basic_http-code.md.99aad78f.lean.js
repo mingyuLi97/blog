@@ -1,0 +1,1 @@
+import{_ as e,o,c as a,R as t}from"./chunks/framework.d45ee533.js";const x=JSON.parse('{"title":"http 状态码","description":"","frontmatter":{},"headers":[],"relativePath":"network/basic/http-code.md"}'),l={name:"network/basic/http-code.md"},i=t("",14),d=[i];function r(c,n,p,h,s,u){return o(),a("div",null,d)}const b=e(l,[["render",r]]);export{x as __pageData,b as default};

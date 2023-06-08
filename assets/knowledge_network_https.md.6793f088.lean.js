@@ -1,1 +1,0 @@
-import{_ as a,o as t,c as e,R as l}from"./chunks/framework.d45ee533.js";const T=JSON.parse('{"title":"HTTPS","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/network/https.md"}'),i={name:"knowledge/network/https.md"},o=l("",25),r=[o];function s(h,n,c,p,d,u){return t(),e("div",null,r)}const b=a(i,[["render",s]]);export{T as __pageData,b as default};
