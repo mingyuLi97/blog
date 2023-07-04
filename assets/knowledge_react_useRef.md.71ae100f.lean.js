@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,R as l}from"./chunks/framework.d45ee533.js";const F=JSON.parse('{"title":"useRef","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/react/useRef.md"}'),e={name:"knowledge/react/useRef.md"},o=l("",8),t=[o];function p(r,c,B,i,y,u){return a(),n("div",null,t)}const f=s(e,[["render",p]]);export{F as __pageData,f as default};

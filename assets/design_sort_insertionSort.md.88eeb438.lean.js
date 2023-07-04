@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,R as p}from"./chunks/framework.d45ee533.js";const C=JSON.parse('{"title":"插入排序","description":"","frontmatter":{},"headers":[],"relativePath":"design/sort/insertionSort.md"}'),l={name:"design/sort/insertionSort.md"},o=p("",3),B=[o];function e(r,t,c,y,A,F){return a(),n("div",null,B)}const E=s(l,[["render",e]]);export{C as __pageData,E as default};

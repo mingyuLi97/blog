@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,R as l}from"./chunks/framework.d45ee533.js";const b=JSON.parse('{"title":"Babel","description":"","frontmatter":{},"headers":[],"relativePath":"engineer/babel/babel.md"}'),e={name:"engineer/babel/babel.md"},p=l("",2),o=[p];function t(c,B,r,i,y,_){return a(),n("div",null,o)}const d=s(e,[["render",t]]);export{b as __pageData,d as default};

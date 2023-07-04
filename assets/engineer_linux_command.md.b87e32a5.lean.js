@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,R as l}from"./chunks/framework.d45ee533.js";const u=JSON.parse('{"title":"基础命令","description":"","frontmatter":{},"headers":[],"relativePath":"engineer/linux/command.md"}'),o={name:"engineer/linux/command.md"},p=l("",13),e=[p];function t(c,r,i,d,B,y){return a(),n("div",null,e)}const m=s(o,[["render",t]]);export{u as __pageData,m as default};

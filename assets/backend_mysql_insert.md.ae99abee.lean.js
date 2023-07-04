@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,R as l}from"./chunks/framework.d45ee533.js";const D=JSON.parse('{"title":"INSERT - 增","description":"","frontmatter":{},"headers":[],"relativePath":"backend/mysql/insert.md"}'),p={name:"backend/mysql/insert.md"},o=l("",11),e=[o];function t(r,c,B,y,i,d){return a(),n("div",null,e)}const F=s(p,[["render",t]]);export{D as __pageData,F as default};

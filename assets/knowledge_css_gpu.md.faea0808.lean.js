@@ -1,1 +1,0 @@
-import{_ as e,o as a,c as r,R as t}from"./chunks/framework.d45ee533.js";const f=JSON.parse('{"title":"CSS3 硬件加速(GPU 加速)","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/css/gpu.md"}'),o={name:"knowledge/css/gpu.md"},i=t("",19),l=[i];function n(s,c,d,p,h,m){return a(),r("div",null,l)}const g=e(o,[["render",n]]);export{f as __pageData,g as default};

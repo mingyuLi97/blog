@@ -1,1 +1,0 @@
-import{_ as s,o as e,c as a,R as t}from"./chunks/framework.d45ee533.js";const y=JSON.parse('{"title":"DELETE - 删","description":"","frontmatter":{},"headers":[],"relativePath":"backend/mysql/delete.md"}'),o={name:"backend/mysql/delete.md"},n=t("",2),l=[n];function p(c,r,d,_,i,B){return e(),a("div",null,l)}const h=s(o,[["render",p]]);export{y as __pageData,h as default};

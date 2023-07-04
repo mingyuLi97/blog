@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,R as l}from"./chunks/framework.d45ee533.js";const d=JSON.parse('{"title":"模块化","description":"","frontmatter":{},"headers":[],"relativePath":"engineer/stander/module.md"}'),o={name:"engineer/stander/module.md"},p=l("",36),e=[p];function B(t,c,r,y,i,F){return n(),a("div",null,e)}const C=s(o,[["render",B]]);export{d as __pageData,C as default};

@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,R as o}from"./chunks/framework.d45ee533.js";const d=JSON.parse('{"title":"new 操作符","description":"","frontmatter":{},"headers":[],"relativePath":"knowledge/js/new.md"}'),l={name:"knowledge/js/new.md"},p=o("",7),e=[p];function t(c,r,B,y,i,F){return a(),n("div",null,e)}const C=s(l,[["render",t]]);export{d as __pageData,C as default};
