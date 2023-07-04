@@ -4,4 +4,4 @@
 
 观察者模式，其实就是为了实现**松耦合**(loosely coupled)。
 
-<<< docs/design/design-pattern/code/observer.js
+<<< ./snippets/observer.js

@@ -52,7 +52,7 @@ console.log(objectSymbols);
 
 ## 简易实现
 
-<<< docs/knowledge/js/code/symbol.js
+<<< ./snippets/symbol.js
 
 ## 参考
 

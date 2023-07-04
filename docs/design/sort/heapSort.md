@@ -16,4 +16,4 @@
 
 ![小顶堆](https://limy-1309594960.cos.ap-beijing.myqcloud.com/202304102240871.png)
 
-<<< docs/design/sort/code/heapSort.js#code
+<<< ./snippets/heapSort.js#code

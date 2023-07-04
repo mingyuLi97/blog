@@ -6,4 +6,4 @@
 
 ![](https://limy-1309594960.cos.ap-beijing.myqcloud.com/202209261914597.gif)
 
-<<< docs/design/sort/code/bubbleSort.js#code
+<<< ./snippets/bubbleSort.js#code

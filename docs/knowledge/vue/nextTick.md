@@ -5,4 +5,4 @@
 
 ## 实现原理
 
-<<< components/nextTick.js#snippet
+<<< ./snippets/nextTick.js#snippet

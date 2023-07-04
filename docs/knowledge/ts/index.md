@@ -1,19 +1,19 @@
 # 类型
 
-<<< docs/knowledge/ts/type.ts#NonNullable
+<<< ./snippets/type.ts#NonNullable
 
-<<< docs/knowledge/ts/type.ts#parameters
+<<< ./snippets/type.ts#parameters
 
-<<< docs/knowledge/ts/type.ts#ReturnType
+<<< ./snippets/type.ts#ReturnType
 
-<<< docs/knowledge/ts/type.ts#partial
+<<< ./snippets/type.ts#partial
 
-<<< docs/knowledge/ts/type.ts#readonly
+<<< ./snippets/type.ts#readonly
 
-<<< docs/knowledge/ts/type.ts#pick
+<<< ./snippets/type.ts#pick
 
-<<< docs/knowledge/ts/type.ts#exclude
+<<< ./snippets/type.ts#exclude
 
-<<< docs/knowledge/ts/type.ts#extract
+<<< ./snippets/type.ts#extract
 
-<<< docs/knowledge/ts/type.ts#omit
+<<< ./snippets/type.ts#omit

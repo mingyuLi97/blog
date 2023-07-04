@@ -24,7 +24,7 @@ Proxy 对象用于创建一个对象的代理，从而实现基本操作的拦�
 - `apply(target, object, args)`：拦截 Proxy 实例作为函数调用的操作，比如 proxy(...args)、proxy.call(object, ...args)、proxy.apply(...)。
 - `construct(target, args)`：拦截 Proxy 实例作为构造函数调用的操作，比如 new proxy(...args)。
 
-<<< components/proxy.js#code1
+<<< ./snippets/proxy.js#code1
 
 ## 反射 Reflect
 
@@ -57,7 +57,7 @@ if (Reflect.defineProperty(target, property, attributes)) {
 
 1. get 陷阱，当一个对象继承自一个代理对象时，其 get 会错误
 
-<<< components/proxy.js#snippet
+<<< ./snippets/proxy.js#snippet
 
 2. 一些复杂的方法比较难实现，比如 `Reflect.ownKeys()`，如果没有 Reflect 开发很难（没必要）去实现 ownKeys 这个方法
 

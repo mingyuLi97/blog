@@ -1,7 +1,7 @@
 # Promise
 
 <script setup>
-import { runPromiseAll, runPromiseRace, runPromiseAny,runPromiseAllSettled } from './promise.js';
+import { runPromiseAll, runPromiseRace, runPromiseAny,runPromiseAllSettled } from './snippets/promise.js';
 </script>
 
 ## 原理
@@ -32,7 +32,7 @@ import { runPromiseAll, runPromiseRace, runPromiseAny,runPromiseAllSettled } fro
 
 <button class="brand-c-button" @click="runPromiseAll">runPromiseAll</button>
 
-<<< docs/knowledge/js/promise.js#all
+<<< ./snippets/promise.js#all
 
 ## Promise.race
 
@@ -41,7 +41,7 @@ import { runPromiseAll, runPromiseRace, runPromiseAny,runPromiseAllSettled } fro
 
 <button class="brand-c-button" @click="runPromiseRace">runPromiseRace</button>
 
-<<< docs/knowledge/js/promise.js#race
+<<< ./snippets/promise.js#race
 
 ## Promise.any
 
@@ -49,7 +49,7 @@ import { runPromiseAll, runPromiseRace, runPromiseAny,runPromiseAllSettled } fro
 
 <button class="brand-c-button" @click="runPromiseAny">runPromiseAny</button>
 
-<<< docs/knowledge/js/promise.js#any
+<<< ./snippets/promise.js#any
 
 ## Promise.allSettled
 
@@ -58,7 +58,7 @@ import { runPromiseAll, runPromiseRace, runPromiseAny,runPromiseAllSettled } fro
 
 <button class="brand-c-button" @click="runPromiseAllSettled">runPromiseAllSettled</button>
 
-<<< docs/knowledge/js/promise.js#allSettled
+<<< ./snippets/promise.js#allSettled
 
 ## 参考
 
