@@ -129,13 +129,14 @@ User 接口为 {
 type 关键字声明的 type 在创建后是不可变的。而 interface 在创建后是可变的，但是这种可变性可以通过索引签名来约束。
 
 ```typescript
-interface __IGetUserServiceList {
-  // 增加索引签名后不能再加入boolean属性
-  [k: string]: string | number;
-  id: string;
+interface A {
+  // 增加索引签名后不能再加入非 string 的属性
+  [k: string]: string;
+  foo: string;
 }
-interface __IGetUserServiceList {
-  rich: boolean; // error
+
+interface A {
+  bar: number; // Property 'bar' of type 'number' is not assignable to 'string' index type 'string'.ts(2411)
 }
 ```
 
